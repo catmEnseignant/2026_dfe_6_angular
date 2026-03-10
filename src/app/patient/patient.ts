@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './patient.html',
   styleUrl: './patient.css',
 })
-export class Patient {
+export class Patient implements OnInit {
   title = 'Patient';
   prenom = "Omar Cheikh";
   nombrePatients = 100;
@@ -17,15 +18,19 @@ export class Patient {
   id = 3;
 
 
-  constructor( private router: Router) {
+  constructor( private router: Router, private http:HttpClient) {
 
 }
-
-  tableauPatients = [
-    { id:1, nom: "Fall", prenom: "Aminata", email: "af@gmail.com"},
-    { id:2, nom: "Ndiaye", prenom: "Patrick", email: "pn@gmail.com"},
-    { id:3, nom: "Seye", prenom: "Bintou", email: "bs@gmail.com"}
-  ];
+ngOnInit(): void {
+    console.log("tester la methode");
+    this.GetPatients().subscribe(res=> {
+      console.log(res);
+      this.tableauPatients2 = res;
+      
+    });
+    
+}
+    tableauPatients2 :any = [];
 
   GetSomme (a: number, b: number): number {
     return a + b;
@@ -46,7 +51,11 @@ export class Patient {
   GetInfoPatient() {
     this.router.navigate(['form-patient']);
   }
+  GetPatients() {
+    return this.http.get('http://localhost:3000/patients');
+    
 
+  }
 
 
 }

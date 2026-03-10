@@ -25,19 +25,7 @@
             </tr>
         </thead>
         <tbody class="table-group-divider">
-            <tr>
-            <th scope="row">{{ id * nombrePatients }}</th>
-            <td>{{ nom }}</td>
-            <td>{{ prenom }}</td>
-            <td>{{ email }}</td>
-            </tr>
-            <tr>
-            <th scope="row">{{ GetSomme(99, 2) }}</th>
-            <td>{{ GetNom() }}</td>
-            <td>{{ GetPrenom() }}</td>
-            <td>{{ GetEmail() }}</td>
-            </tr>
-            @for(item of tableauPatients;track $index){
+            @for(item of tableauPatients2;track $index){
                 <tr>
                     <th scope="row">{{ $index+1 }}</th>
                     <td>{{ item.nom }}</td>
