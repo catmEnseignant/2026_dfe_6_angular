@@ -1,0 +1,22 @@
+footer a {
+    color: #745b5b;
+    text-decoration: none;
+
+}
+footer {
+    background-color: #212529;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+footer a:visited {
+    color: #fff;
+}
+footer h5 {
+    margin: 0;
+    color: brown;
+}

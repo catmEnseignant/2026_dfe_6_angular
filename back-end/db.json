@@ -1,0 +1,7 @@
+{
+    "patients" : [
+        {"id": 1, "nom": "Fatou Bintou", "age": 30, "genre": "Femme", "email": "fatoubintou@gmail.com"},
+        {"id": 2, "nom": "Ndeye khady", "age": 25, "genre": "Femme", "email": "ndeyekhady@gmail.com"},
+        {"id": 3, "nom": "Mamadou Lamine", "age": 40, "genre": "Homme", "email": "mamadoulamine@gmail.com"}
+    ]
+}

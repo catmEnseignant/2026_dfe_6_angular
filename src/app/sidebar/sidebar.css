@@ -1,0 +1,15 @@
+.sidebar {
+  height: 100vh;
+  background-color: #212529;
+}
+li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+
+}
+li a:hover {
+    background-color: rgba(165, 42, 42, 0.493);
+    color: #fff;
+}
