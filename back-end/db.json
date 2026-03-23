@@ -1,6 +1,9 @@
 {
     "patients":[
         {"id":1, "nom": "Gadiaga","prenom": "Khady", "email": "khady.gadiaga@mainModule.com"},
-        {"id":2, "nom": "Diallo","prenom": "Mamadou", "email": "mamadou.diallo@mainModule.com"}           
+        {"id":2, "nom": "Diallo","prenom": "Mamadou", "email": "mamadou.diallo@mainModule.com"},
+        {"id":3, "nom": "Sarr","prenom": "Awa", "email": "awa.sarr@mainModule.com"},
+        {"id":4, "nom": "Diop","prenom": "Ousmane", "email": "ousmane.diop@mainModule.com"},
+        {"id":5, "nom": "Fall","prenom": "Fatou", "email": "fatou.fall@mainModule.com"}             
     ]
 }
