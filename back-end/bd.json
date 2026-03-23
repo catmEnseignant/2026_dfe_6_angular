@@ -1,0 +1,7 @@
+{
+    "patients" :[
+        {"id": 1,"prenom": "khalifa", "nom": "Samba","email": "khalifa.samba@example.com","age": 30},
+        {"id": 2,"prenom": "moussa", "nom": "diouf","email": "moussa.diouf@example.com","age": 25},
+        {"id": 3,"prenom": "fatou", "nom": "ndiaye","email": "fatou.ndiaye@example.com","age": 28}
+    ]
+}

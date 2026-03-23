@@ -1,0 +1,48 @@
+/* Sidebar Bootstrap Responsive Styles */
+
+.sidebar {
+ margin-top: -70px;
+  width: 260px;
+  height: 100vh;
+  background: #24578b;
+  transition: all 0.3s;
+  box-shadow: 2px 0 5px rgba(246, 245, 245, 0.05);
+}
+
+
+
+#sidebar ul.components {
+  padding: 0;
+}
+
+#sidebar ul li {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+#sidebar ul li.active > a {
+  color: #007bff;
+  font-weight: bold;
+}
+
+#sidebar ul li a {
+  color: #fdfdfd;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s;
+}
+
+#sidebar ul li a:hover {
+  color: #1e7ce0;
+}
+
+@media (max-width: 767px) {
+  #sidebar {
+    min-width: 0;
+    max-width: 100%;
+    position: absolute;
+    z-index: 1000;
+    min-height: 100vh;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+  }
+}

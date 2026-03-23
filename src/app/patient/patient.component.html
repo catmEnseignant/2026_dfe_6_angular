@@ -1,0 +1,41 @@
+<div class="card">
+        <div class="card-header">
+            <div class ="row">
+                <div class="col-5">
+                        <h3>{{ title }}</h3>
+
+                </div>
+                <div class="col-3">
+                    <input class="form-control me-2" type="search" placeholder="{{ getEmail() }}" aria-label="Search"/>
+                    
+                </div>
+                <div class="col-4">
+                    <button (click)="getInfoPatient()" class="btn btn-outline-success" type="submit"> ajouter un patient</button>
+                </div>
+            </div>
+        <div class="body-card">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">PRENOM</th>
+                        <th scope="col">NOM</th>
+                        <th scope="col">EMAIL</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <tr>
+                           <th scope="row">{{getSomme(3, 2) }}</th>
+                           <td>{{prenom }}</td>
+                           <td>{{ nom }}</td>
+                           <td>{{ getEmail()}}</td>
+                        </tr>
+                    </tbody>
+
+
+                </table>
+            </div>
+        </div>
+    </div>
