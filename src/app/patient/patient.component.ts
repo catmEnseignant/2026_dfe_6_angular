@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,13 +10,19 @@ import { Router } from '@angular/router';
 })
 export class PatientComponent {
 title = 'Patients';
-numberPatients = 100;
 
-  prenom='binta'
-   nom = 'Dieye'
-   email = 'dieye@example.com' 
+  Patients2: any = [];
 
-constructor(private route : Router ){}
+constructor(private route : Router ,private http: HttpClient){}
+
+
+ngOnInit(): void {
+  console.log('tester la methode');
+  this.getPatients().subscribe ( res => {
+    console.log(res)
+    this.Patients2 = res 
+  });
+}
 
   getSomme(a: number, b: number): number {
     return a + b
@@ -26,5 +33,10 @@ getEmail(): string {
 
  getInfoPatient(): void {
   this.route.navigate(['/Formulaire']);
+
+}
+
+getPatients() {
+  return this.http.get("http://localhost:3000/patients");
 }
 }

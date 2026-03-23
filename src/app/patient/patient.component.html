@@ -26,12 +26,14 @@
 
 
                     <tbody>
+                        @for (item of Patients2 ; track $index){
                         <tr>
-                           <th scope="row">{{getSomme(3, 2) }}</th>
-                           <td>{{prenom }}</td>
-                           <td>{{ nom }}</td>
-                           <td>{{ getEmail()}}</td>
+                           <th scope="row">{{ $index+1 }}</th>
+                           <td>{{ item.prenom }}</td>
+                           <td>{{ item.nom }}</td>
+                           <td>{{ item.email }}</td>
                         </tr>
+                        }
                     </tbody>
 
 
