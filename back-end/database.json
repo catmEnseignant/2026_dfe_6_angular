@@ -20,6 +20,27 @@
             "prenom": "Mamadou",
             "email": "mamadou@gmail.com",
             "age": 30
+        },
+        {
+            "id": 4,
+            "nom": "Niang",
+            "prenom": "Cheikh Omar",
+            "email": "omar@gmail.com",
+            "age": 21
+        },
+        {
+            "id": 5,
+            "nom": "Thiombane",
+            "prenom": "Baye",
+            "email": "thioms@gmail.com",
+            "age": 20
+        },
+        {
+            "id": 6,
+            "nom": "Diop",
+            "prenom": "Khardiata",
+            "email": "khady@gmail.com",
+            "age": 24
         }
     ]
 }
