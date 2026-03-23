@@ -1,0 +1,42 @@
+.patient-footer {
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 20px 40px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.footer-left p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.footer-center a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-center a:hover {
+  color: #ffffff;
+}
+
+.footer-right p {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
