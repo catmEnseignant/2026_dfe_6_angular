@@ -1,0 +1,56 @@
+
+<div class="card">
+    <div class="card-hearder">
+      <div class="row">
+        <div class="col-5">
+          @if(title === 'patients'){
+             <h5 >{{title}}</h5> 
+          }@else {
+            <h3>title introuvable</h3>
+          }
+        </div>
+        <div class="col-3">
+          <input class="form-control me-2" type="search"[placeholder]="getEmail()" aria-label="Search">
+        </div>
+          <div class="col-4">
+             <button class="btn btn-primary"
+              (click)="getInfoPatient()">Ajouter un patient</button>
+          </div>
+      </div> 
+    </div>
+  <div class="card-body">
+     <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">nom</th>
+      <th scope="col">prenom</th>
+      <th scope="col">email</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(item of Patients; track $index){
+    <tr>
+      <th scope="row">{{3*nombrePatients}}</th>
+      <td>{{item.prenom}}</td>
+      <td>{{item.nom}}</td>
+      <td>{{item.email}}</td>
+    </tr>
+  }
+    <tr>
+      <th scope="row">{{getSomme(2,3)}}</th>
+      <td>anta</td>
+      <td>faye</td>
+      <td>faye.anta@gmail.com</td>
+    </tr>
+    <tr>
+      <th scope="row">{{getEmail()}}</th>
+      <td>Haby</td>
+      <td>Ndiaye</td>
+      <td>haby.ndiaye@gmail.com</td>
+    </tr>
+  </tbody>
+     </table>
+  
+  </div>
+</div>
