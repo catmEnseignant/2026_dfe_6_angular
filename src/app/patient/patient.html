@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-5">
+                @if (title == 'Patients') {
+                    <h3 >{{ title }}</h3> 
+                } @else {
+                    <h3> Titre introuvable </h3>
+                }
+            </div>
+            <div class="col-5">
+                <input class="col-3 form-control me-2" type="search" [placeholder]= "title" aria-label="Search"/>
+            </div>
+            <div class="col-2">
+                <button (click)="getInfoPatient()" class="col btn btn-outline-success" type="submit">Ajouter un patient</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                @for(item of patients ;track $index) {
+                    <tr>
+                        <th scope="row">{{ $index+1 }}</th>
+                        <td>{{ item.prenom }}</td>
+                        <td>{{ item.nom }}</td>
+                        <td> {{ item.email }} </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
