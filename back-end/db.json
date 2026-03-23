@@ -1,0 +1,7 @@
+{
+    "patients" : [
+        { "prenom": "paya", "nom": "niang", "email": "p.niang04@gmail,com", "age": 34},
+        { "prenom": "modou", "nom": "sarr", "email": "sarr.f@gmail.com", "age": 34},
+        { "prenom": "bamba", "nom": "niang", "email": "p.niang04@getMaxListeners    .com", "age": 34}
+    ]
+}
