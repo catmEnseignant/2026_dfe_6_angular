@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,25 +9,42 @@ import { Route, Router } from '@angular/router';
   templateUrl: './patient.html',
   styleUrl: './patient.css',
 })
-export class Patient {
-title = 'Patients';
-nombrePatient = 100;
-prenom = 'Dieynaba';
-nom = "fall";
-email = "diey@fall"
+export class Patient implements OnInit
+{
+  title = 'Patients';
 
-constructor(private router: Router){
-  
-}
+
+tableauPatients2 :any = [];
+ 
+  constructor(private router: Router,private http:HttpClient) {
+    
+  }
+
+  ngOnInit(): void {
+    console.log ("tester la methode");
+    this.getPatients().subscribe(res => {
+      console.log (res);
+      this.tableauPatients2 = res;
+    });
+  }
 
 getSomme(a: number, b: number): number{
   return a + b;
 }
 getEmail():string{
-  return "rabynagido@gmail";
+  return"seck@mail.com";
 }
 
 getInfoPatient(){
-  this.router.navigate(['direction']);
+  this.router.navigate(['form']);
+
 }
+
+ getPatients(){
+   return this.http.get("http://localhost:3000/patients");
+   
+ }
+
+
+
 }
