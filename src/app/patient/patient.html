@@ -19,14 +19,14 @@
   <div class="card-body"></div>
     <table class="table">
         <thead>
-          <tr>
+           <tr>
             <th scope="col">#</th>
             <th scope="col">Nom</th>
             <th scope="col">Email</th>
           </tr>
         </thead>
         <tbody>
-          @for(item of patients ; track $index){
+          @for(item of tableauPatients2 ; track $index){
             <tr>
               <th scope="col">{{$index+1}}</th>
               <td>{{item.prenom}}</td>
