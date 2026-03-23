@@ -1,0 +1,66 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <!--cette partie est pour afficher le titre du composant patient dans la page d'accueil de l'application.-->
+            @if (title){
+                <div class="col-5"><h5>{{ title }}</h5></div>
+            }
+            <div class="col-3">
+                <input class="form-control me-2" type="search" [placeholder]="getEmail()" aria-label="Search"/>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-outline-success" (click)="getInfoPatient()">Ajouter un patient</button>
+            </div>
+
+           
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--cette partie est pour afficher la liste des patients dans la page d'accueil de l'application.-->
+                <!--track permet de suivre les changements dans la liste des patients-->
+                @for (patient of patients; track patient.id){
+                    <div>
+                        <tr>
+                            <!--cette partie est pour afficher les détails d'un patient dans la liste.-->
+                            <th scope="row">{{$index + 1}}</th>
+                            <td>{{patient.nom}}</td>
+                            <td>{{patient.prenom}}</td>
+                            <td>{{patient.email}}</td>
+                        </tr>
+
+                    </div>
+                  
+                }
+                <tr>
+                    <th scope="row">{{3*nombrePatients}}</th> <!--l'interpelation s'ecrit {{}}-->
+                    <td>{{prenom}}</td>
+                    <td>{{nom}}</td>
+                    <td>{{email}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">{{getSomme(2, 3)}}</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">{{getEmail()}}</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>@social</td>
+                </tr>
+            </tbody>
+        </table>
+            
+    </div>
+</div>
