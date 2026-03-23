@@ -2,7 +2,8 @@
 {
     "patient":[
         {"id":1,"prenom":"Dieyna","nom":"Faye","email":"dieynabaf741@gmail.com"},
-        {"id":2,"prenom":"Binetou","nom":"Dieye","email":"binetou@gmail.com"}
+        {"id":2,"prenom":"Binetou","nom":"Dieye","email":"binetou@gmail.com"},
+        {"id":3,"prenom":"Ndeye Fatou","nom":"Faye","email":"ndeye@gmail.com"}
         
     ]
 }
