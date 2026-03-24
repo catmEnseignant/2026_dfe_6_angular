@@ -2,6 +2,9 @@
     "patients": [
     { "id": 1, "prenom": "fatou", "nom": "sarr", "email": "exemple@gmail.com" ,"age": 25},
     { "id": 2, "prenom": "bineta", "nom": "dieye", "email": "bineta@gmail.com" ,"age": 30},
-    { "id": 3, "prenom": "omar", "nom": "niang", "email": "omar@gmail.com" ,"age": 35}
+    { "id": 3, "prenom": "omar", "nom": "niang", "email": "omar@gmail.com" ,"age": 35},
+    { "id": 4, "prenom": "moussa", "nom": "diop", "email": "moussa@gmail.com" ,"age": 40},
+    { "id": 5, "prenom": "aissatou", "nom": "ba", "email": "aissatou@gmail.com" ,"age": 45},
+    { "id": 6, "prenom": "mamadou", "nom": "sow", "email": "mamadou@gmail.com" ,"age": 50}
     ]
 }
