@@ -1,7 +1,7 @@
+
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
-
-
+import { email } from '@angular/forms/signals';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-patient',
@@ -10,28 +10,28 @@ import { Route, Router } from '@angular/router';
   styleUrl: './patient.css',
 })
 export class Patient {
-  title = 'patients';
-  nombrePatients = 100;
-  prenom = "fatou";
-  nom = "kebe";
-  email = "kebe03.fatou@gmail.com";
-  getSomme(a: number, b: number): number{
-    return a + b;
-  }
-  constructor(private router: Router){
+  title = 'Patients'
+  
+  Patients = [
+    {nom: 'John', prenom: 'Doe', mail: 'john.doe@example.com'},
+    {nom: 'Jane', prenom: 'Smith', mail: 'jane.smith@example.com'},
+    {nom: 'Bob', prenom: 'Johnson', mail: 'bob.johnson@example.com'},
+    {nom: 'amy', prenom: 'Johnson', mail: 'amy.johnson@example.com'}
+  ]
 
+  constructor(private router: Router) { // Injection de dependance
+     
+  }
+  getSomme(a: number , b: number): number{
+    return a + b;
   }
 
   getEmail():string{
-    return "kebe03.fatou@gmail.com";
+    return "exemple@gmail.com"
   }
 
   getInfoPatient(){
-    this.router.navigate(['direction']);
+    this.router.navigate(['direction'])
   }
 
- 
-
-  }
-
-
+}

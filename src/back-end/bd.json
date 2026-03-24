@@ -1,7 +1,0 @@
-{
-    "patients" : [
-        {"id":1,"nom":"kebe","prenom":"fatou","mail":"exemple@gmail.com","age":20},
-        {"id":2,"nom":"kebe","prenom":"amy","mail":"amy@gmail.com","age":24},
-        {"id":3,"nom":"ndiaye","prenom":"ana","mail":"ana@gmail.com","age":27}
-    ]
-}
