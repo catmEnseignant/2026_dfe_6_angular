@@ -3,7 +3,7 @@ import { Content } from '../content/content';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-sidebar',
+  selector: 'app-sidebar', // le selector permet d'utiliser ce composant dans d'autres composants en utilisant la balise <app-sidebar></app-sidebar>
   imports: [Content, RouterLink],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
