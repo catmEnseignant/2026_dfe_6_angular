@@ -1,9 +1,52 @@
 {
-    "patients" : [
-        {"id": 1, "nom": "Fatou Bintou", "age": 30, "genre": "Femme", "email": "fatoubintou@gmail.com"},
-        {"id": 2, "nom": "Ndeye khady", "age": 25, "genre": "Femme", "email": "ndeyekhady@gmail.com"},
-        {"id": 4, "nom": "Baye Marame", "age": 20, "genre": "Homme", "email": "bayemarame@gmail.com"},
-        {"id": 5, "nom": "Abdoulaye Samba", "age": 20, "genre": "Homme", "email": "abdsamba@gmail.com"},
-        {"id": 6, "nom": "Mamadou Lamine", "age": 40, "genre": "Homme", "email": "mamadoulamine@gmail.com"}
-    ]
+  "patients": [
+    {
+      "id": "1",
+      "prenom": "Fatou Bintou",
+      "nom": "Diop",
+      "age": 30,
+      "genre": "Femme",
+      "email": "fatoubintou@gmail.com"
+    },
+    {
+      "id": "2",
+      "prenom": "Ndeye khady",
+      "nom": "Niang",
+      "age": 25,
+      "genre": "Femme",
+      "email": "ndeyekhady@gmail.com"
+    },
+    {
+      "id": "4",
+      "prenom": "Baye Marame",
+      "nom": "Thiombane",
+      "age": 20,
+      "genre": "Homme",
+      "email": "bayemarame@gmail.com"
+    },
+    {
+      "id": "5",
+      "prenom": "Abdoulaye Samba",
+      "nom": "Samba",
+      "age": 20,
+      "genre": "Homme",
+      "email": "abdsamba@gmail.com"
+    },
+    {
+      "id": "6",
+      "prenom": "Mamadou Lamine",
+      "nom": "Sagna",
+      "age": 40,
+      "genre": "Homme",
+      "email": "mamadoulamine@gmail.com"
+    },
+    {
+      "id": "0283",
+      "prenom": "Fallou",
+      "nom": "Diop",
+      "email": "fallou@gmail.com",
+      "dateNaissance": "2026-04-17"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

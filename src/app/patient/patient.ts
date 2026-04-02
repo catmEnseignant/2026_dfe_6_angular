@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { error } from 'node:console';
 
 
 @Component({
@@ -27,7 +28,11 @@ ngOnInit(): void {
       console.log(res);
       this.tableauPatients2 = res;
       
-    });
+    },error=>{
+        console.log(error);
+        console.log("Erreur lors de la recuperation des patients");
+        
+      });
     
 }
     tableauPatients2 :any = [];
@@ -48,9 +53,15 @@ ngOnInit(): void {
     return "Thiombane";
   }
 
+  Getplaceholder(): string {
+    return "Ajouter un patient";
+  }
+
+
   GetInfoPatient() {
     this.router.navigate(['form-patient']);
   }
+
   GetPatients() {
     return this.http.get('http://localhost:3000/patients');
     

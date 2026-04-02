@@ -9,7 +9,7 @@
                 }
             </div>
             <div class="col-7 d-flex justify-content-end">
-                <input class="form-control me-2" type="search" [placeholder]="GetNom()" aria-label="Search">
+                <input class="form-control me-2" type="search" [placeholder]="Getplaceholder()" aria-label="Search">
                 <button class="btn btn-outline-success" type="button" (click)="GetInfoPatient()">Ajouter</button>
             </div>
         </div>
@@ -19,8 +19,8 @@
         <thead>
             <tr>
             <th scope="col">#</th>
-            <th scope="col">Nom</th>
             <th scope="col">Prenom</th>
+            <th scope="col">Nom</th>
             <th scope="col">Email</th>
             </tr>
         </thead>
@@ -28,8 +28,8 @@
             @for(item of tableauPatients2;track $index){
                 <tr>
                     <th scope="row">{{ $index+1 }}</th>
-                    <td>{{ item.nom }}</td>
                     <td>{{ item.prenom }}</td>
+                    <td>{{ item.nom }}</td>
                     <td>{{ item.email }}</td>
                 </tr>
             }

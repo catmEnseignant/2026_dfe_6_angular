@@ -5,75 +5,39 @@
     </div>
 
     <div class="card-body">
-      <form>
+      <form [formGroup]="formPatient" (ngSubmit)="inputFormPatient()">
 
         <div class="row mb-3">
           <div class="col-md-6">
             <label class="form-label">Nom</label>
-            <input type="text" class="form-control" placeholder="Entrez le nom">
+            <input type="text" class="form-control" placeholder="Entrez le nom" formControlName="nom">
           </div>
 
           <div class="col-md-6">
             <label class="form-label">Prénom</label>
-            <input type="text" class="form-control" placeholder="Entrez le prénom">
+            <input type="text" class="form-control" placeholder="Entrez le prénom" formControlName="prenom">
           </div>
         </div>
 
         <div class="row mb-3">
           <div class="col-md-6">
             <label class="form-label">Email</label>
-            <input type="email" class="form-control" placeholder="exemple@mail.com">
+            <input type="email" class="form-control" placeholder="exemple@mail.com" formControlName="email">
           </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Téléphone</label>
-            <input type="tel" class="form-control" placeholder="77 000 00 00">
-          </div>
-        </div>
-
-        <div class="row mb-3">
           <div class="col-md-6">
             <label class="form-label">Date de naissance</label>
-            <input type="date" class="form-control">
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Sexe</label>
-            <select class="form-select">
-              <option selected>Choisir...</option>
-              <option>Homme</option>
-              <option>Femme</option>
-            </select>
+            <input type="date" class="form-control" formControlName="dateNaissance">
           </div>
         </div>
 
-        <div class="mb-3">
-          <label class="form-label">Adresse</label>
-          <textarea class="form-control" rows="3" placeholder="Adresse complète"></textarea>
-        </div>
 
-        <div class="mb-3">
-          <label class="form-label">Groupe sanguin</label>
-          <select class="form-select">
-            <option selected>Choisir...</option>
-            <option>A+</option>
-            <option>A-</option>
-            <option>B+</option>
-            <option>B-</option>
-            <option>AB+</option>
-            <option>AB-</option>
-            <option>O+</option>
-            <option>O-</option>
-          </select>
-        </div>
+
+
 
         <!-- Boutons -->
         <div class="d-flex justify-content-end">
-          <button type="reset" class="btn btn-secondary me-2">
-            Annuler
-          </button>
 
-          <button type="submit" class="btn btn-success">
+          <button type="submit" class="btn btn-success" >
             Enregistrer
           </button>
           <a href="/patient" class="btn btn-outline-primary ms-2">Retour à la liste des patients</a>
