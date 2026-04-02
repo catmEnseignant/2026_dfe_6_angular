@@ -1,0 +1,4 @@
+nav {
+    width: calc(100% - 280px);
+    left: 280px;
+}

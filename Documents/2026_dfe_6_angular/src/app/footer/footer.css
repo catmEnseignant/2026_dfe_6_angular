@@ -1,0 +1,8 @@
+footer{
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 280px);
+    left: 280px;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}

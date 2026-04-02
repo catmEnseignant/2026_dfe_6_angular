@@ -1,0 +1,118 @@
+/* Styles spécifiques pour la page Annonces */
+
+/* Section Annonces */
+.annonces-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.annonces-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #2c5530;
+}
+
+.annonces-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.annonce-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.annonce-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.annonce-header {
+    background-color: #2c5530;
+    color: white;
+    padding: 1rem;
+}
+
+.annonce-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.annonce-date {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.annonce-content {
+    padding: 1.5rem;
+}
+
+.annonce-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.annonce-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.annonce-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c5530;
+}
+
+.annonce-location {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.btn-subscribe {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2c5530;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.btn-subscribe:hover {
+    background-color: #1e3a22;
+}
+
+.btn-subscribe.subscribed {
+    background-color: #28a745;
+}
+
+.btn-subscribe.subscribed:hover {
+    background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .annonces-section {
+        padding: 2rem 0;
+    }
+
+    .annonces-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .annonce-card {
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "patients" : [
+        {
+            "id": 1,
+            "nom": "Diaw",
+            "prenom": "aby",
+            "email": "diaw@gmail.com",
+            "age": 50
+        },
+        {
+            "id": 2,
+            "nom": "Faye",
+            "prenom": "Dieynaba",
+            "email": "dieyna@gmail.com",
+            "age": 20
+        },
+        {
+            "id": 3,
+            "nom": "dieye",
+            "prenom": "binetou",
+            "email": "dieye@gmail.com",
+            "age": 30
+        },
+        {
+            "id": 4,
+            "nom": "wane",
+            "prenom": "aldiouma",
+            "email": "wane@gmail.com",
+            "age": 21
+        },
+        {
+            "id": 5,
+            "nom": "Thiombane",
+            "prenom": "Baye",
+            "email": "thioms@gmail.com",
+            "age": 20
+        },
+        {
+            "id": 6,
+            "nom": "Diop",
+            "prenom": "Khardiata",
+            "email": "khady@gmail.com",
+            "age": 24
+        }
+    ]
+}
