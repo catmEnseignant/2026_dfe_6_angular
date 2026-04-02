@@ -1,7 +1,7 @@
-
-import { Component } from '@angular/core';
-import { email } from '@angular/forms/signals';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-patient',
@@ -9,29 +9,42 @@ import { Router } from '@angular/router';
   templateUrl: './patient.html',
   styleUrl: './patient.css',
 })
-export class Patient {
-  title = 'Patients'
-  
-  Patients = [
-    {nom: 'John', prenom: 'Doe', mail: 'john.doe@example.com'},
-    {nom: 'Jane', prenom: 'Smith', mail: 'jane.smith@example.com'},
-    {nom: 'Bob', prenom: 'Johnson', mail: 'bob.johnson@example.com'},
-    {nom: 'amy', prenom: 'Johnson', mail: 'amy.johnson@example.com'}
-  ]
+export class Patient implements OnInit
+{
+  title = 'Patients';
 
-  constructor(private router: Router) { // Injection de dependance
-     
-  }
-  getSomme(a: number , b: number): number{
-    return a + b;
+
+tableauPatients2 :any = [];
+ 
+  constructor(private router: Router,private http:HttpClient) {
+    
   }
 
-  getEmail():string{
-    return "exemple@gmail.com"
+  ngOnInit(): void {
+    console.log ("tester la methode");
+    this.getPatients().subscribe(res => {
+      console.log (res);
+      this.tableauPatients2 = res;
+    });
   }
 
-  getInfoPatient(){
-    this.router.navigate(['direction'])
-  }
+getSomme(a: number, b: number): number{
+  return a + b;
+}
+getEmail():string{
+  return"seck@mail.com";
+}
+
+getInfoPatient(){
+  this.router.navigate(['formPatient']);
+
+}
+
+ getPatients(){
+   return this.http.get("http://localhost:3000/patients");
+   
+ }
+
+
 
 }
