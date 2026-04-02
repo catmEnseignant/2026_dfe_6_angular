@@ -22,7 +22,10 @@
            <tr>
             <th scope="col">#</th>
             <th scope="col">Nom</th>
+             <th scope="col">Prenom</th>
             <th scope="col">Email</th>
+            <th scope="col">Âge</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -31,26 +34,10 @@
               <th scope="col">{{$index+1}}</th>
               <td>{{item.prenom}}</td>
               <td>{{item.nom}}</td>
-              <td>{{item.email}}</td>
+              <td>{{item.mail}}</td>
+              <td>{{item.age}}</td>
             </tr>
           }
-        
-        <tr>
-          <th scope="row">{{getSomme(2,3)}}</th>
-          <td>Raby</td>
-          <td>Ngaido</td>
-          <td>rabyngaido65@gmail.com</td>
-          
-          
-        </tr>
-        <tr>
-          <th scope="row">{{getEmail()}}</th>
-          <td>Fatou </td>
-          <td>Kebe</td>
-          <td>fatoukebe@gmail.com</td>
-          
-          
-        </tr>
         </tbody>
 </table>
 </div>

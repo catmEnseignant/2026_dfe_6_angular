@@ -22,9 +22,14 @@ tableauPatients2 :any = [];
 
   ngOnInit(): void {
     console.log ("tester la methode");
-    this.getPatients().subscribe(res => {
-      console.log (res);
-      this.tableauPatients2 = res;
+    this.getPatients().subscribe({
+      next: (res) => {
+        console.log('Données reçues:', res);
+        this.tableauPatients2 = res;
+      },
+      error: (err) => {
+        console.error('Erreur lors de la récupération des patients:', err);
+      }
     });
   }
 
@@ -36,7 +41,7 @@ getEmail():string{
 }
 
 getInfoPatient(){
-  this.router.navigate(['form']);
+  this.router.navigate(['direction']);
 
 }
 
