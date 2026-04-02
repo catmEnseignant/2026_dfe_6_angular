@@ -4,6 +4,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { Subject, filter, takeUntil } from 'rxjs';
 import { error } from 'node:console';
 
+g
 @Component({
   selector: 'app-patient',
   imports: [],
