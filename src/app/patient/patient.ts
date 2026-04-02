@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { error } from 'node:console';
 
 @Component({
   selector: 'app-patient',
@@ -22,6 +23,9 @@ tableauPatients2: any = [];
     this.getPatients().subscribe(res => {
       console.log(res);
       this.tableauPatients2 = res;
+    }, error => {
+      console.log('Erreur lors de la récupération des patients');
+      console.log(error);
     });
   }
 
