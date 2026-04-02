@@ -1,10 +1,47 @@
 {
-    "patients": [ 
-        {"id": 1, "nom": "Raby", "prenom": "Ngaido", "mail": "john.doe@example.com", "age": 20}, 
-        {"id": 2, "nom": "Haby", "prenom": "Niang", "mail": "jane.smith@example.com", "age": 34}, 
-        {"id": 3, "nom": "Foutou", "prenom": "Kebe", "mail": "bob.johnson@example.com", "age": 4},
-
-        {"id": 3, "nom": "Amy", "prenom": "Ndaiye", "mail": "bob.johnson@example.com", "age": 4}
-    ]
-    
+  "patients": [
+    {
+      "id": "1",
+      "nom": "Raby",
+      "prenom": "Ngaido",
+      "mail": "john.doe@example.com",
+      "age": 20
+    },
+    {
+      "id": "2",
+      "nom": "Haby",
+      "prenom": "Niang",
+      "mail": "jane.smith@example.com",
+      "age": 34
+    },
+    {
+      "id": "3",
+      "nom": "Foutou",
+      "prenom": "Kebe",
+      "mail": "bob.johnson@example.com",
+      "age": 4
+    },
+    {
+      "id": "4",
+      "nom": "Amy",
+      "prenom": "Ndaiye",
+      "mail": "bob.johnson@example.com",
+      "age": 4
+    },
+    {
+      "prenom": "Dia",
+      "nom": "Dieynaba",
+      "mail": "admin@gmail.com",
+      "age": 22,
+      "id": "VVa9L0InUH0"
+    },
+    {
+      "prenom": "Kourssoum",
+      "nom": "sy",
+      "mail": "kour@ssoum",
+      "age": 24,
+      "id": "Y_7T8A1YsPg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

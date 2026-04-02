@@ -1,20 +1,25 @@
 <div class="container mt-4">
   <h3 class="mb-4">Formulaire Patient</h3>
 
-  <form>
+  <form [formGroup]="formPatient" (ngSubmit)="inputFormPatient()">
     <div class="mb-3">
       <label class="form-label">Nom</label>
-      <input type="text" class="form-control" placeholder="Entrer le nom">
+      <input type="text" class="form-control" id="inputNom" formControlName="nom" placeholder="Entrer le nom">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Prénom</label>
-      <input type="text" class="form-control" placeholder="Entrer le prénom">
+      <input type="text" class="form-control" id="inputPrenom" formControlName="prenom" placeholder="Entrer le prénom">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Email</label>
-      <input type="email" class="form-control" placeholder="Entrer l'email">
+      <input type="email" class="form-control" id="inputEmail" formControlName="mail" placeholder="Entrer l'email">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Âge</label>
+      <input type="number" class="form-control" id="inputAge" formControlName="age" placeholder="Entrer l'âge">
     </div>
 
     <div class="form-check mb-3">
@@ -23,6 +28,7 @@
         Accepter les conditions
       </label>
     </div>
+
 
     <button type="submit" class="btn btn-primary">
       Enregistrer
