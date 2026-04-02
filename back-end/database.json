@@ -49,6 +49,14 @@
       "email": "j@gmail.com",
       "age": 12,
       "consent": true
+    },
+    {
+      "id": "b6fe",
+      "prenom": "ll",
+      "nom": "hh",
+      "email": "h@gmail.com",
+      "age": 2,
+      "consent": true
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
