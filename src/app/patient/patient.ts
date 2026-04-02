@@ -25,6 +25,10 @@ tableauPatients2 :any = [];
     this.getPatients().subscribe(res => {
       console.log (res);
       this.tableauPatients2 = res;
+      console.log(this.tableauPatients2);
+    },error=>{
+      console.log("erreur lors de la recuperation des patients");
+      console.log(error);
     });
   }
 
@@ -36,7 +40,7 @@ getEmail():string{
 }
 
 getInfoPatient(){
-  this.router.navigate(['form']);
+  this.router.navigate(['formulaire']);
 
 }
 

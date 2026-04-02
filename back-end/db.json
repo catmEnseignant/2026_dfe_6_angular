@@ -1,11 +1,76 @@
 {
-    "patients" :[
-        {"id": 1,  "prenom": "Fatima", "nom": "Wane", "email": "wanealdiouma@mail.com" },
-        { "id": 2, "prenom": "Moussa", "nom": "Diop", "email": "moussadiop@mail.com" },
-        {"id": 4,  "prenom": "anta", "nom": "ba", "email": "anna@mail.com" },
-        { "id": 5, "prenom": "amina", "nom": "Diaw", "email": "diaw23@mail.com" },
-
-        {"id": 4,  "prenom": "astou", "nom": "bane", "email": "aldiouma@mail.com" },
-        { "id": 5, "prenom": "weuz", "nom": "Dia", "email": "dia@mail.com" }
-    ]
+  "patients": [
+    {
+      "id": "1",
+      "prenom": "Fatima",
+      "nom": "Wane",
+      "email": "wanealdiouma@mail.com",
+      "age": 25,
+      "consent": false
+    },
+    {
+      "id": "2",
+      "prenom": "Moussa",
+      "nom": "Diop",
+      "email": "moussadiop@mail.com",
+      "age": 30,
+      "consent": false
+    },
+    {
+      "id": "3",
+      "prenom": "anta",
+      "nom": "ba",
+      "email": "anna@mail.com",
+      "age": 22,
+      "consent": false
+    },
+    {
+      "id": "4",
+      "prenom": "amina",
+      "nom": "Diaw",
+      "email": "diaw23@mail.com",
+      "age": 28,
+      "consent": false
+    },
+    {
+      "id": "5",
+      "prenom": "astou",
+      "nom": "bane",
+      "email": "aldiouma@mail.com",
+      "age": 35,
+      "consent": false
+    },
+    {
+      "id": "6",
+      "prenom": "weuz",
+      "nom": "Dia",
+      "email": "dia@mail.com",
+      "age": 27,
+      "consent": false
+    },
+    {
+      "id": "7",
+      "nom": "wane",
+      "prenom": "Fatima",
+      "email": "fatima.wane@mail.com",
+      "age": 25,
+      "consent": true
+    },
+    {
+      "id": "8",
+      "nom": "ndoye",
+      "prenom": "aida",
+      "email": "aida.ndoye@mail.com",
+      "age": 22,
+      "consent": true
+    },
+    {
+      "id": "9",
+      "nom": "niang",
+      "prenom": "paya",
+      "email": "paya.niang@mail.com",
+      "age": 22,
+      "consent": true
+    }
+  ]
 }

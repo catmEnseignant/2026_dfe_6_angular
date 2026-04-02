@@ -1,32 +1,51 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-from-patient',
   standalone: true,
-  imports: [FormsModule,RouterLink],
+  imports: [ CommonModule, ReactiveFormsModule],
   templateUrl: './from-patient.html',
   styleUrl: './from-patient.css'
 })
 
 export class FromPatient {
+   formPatient = new FormGroup({
+    nom: new FormControl('', Validators.required),
+    prenom: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),  // ✅ AJOUTÉ
+    age: new FormControl('', [Validators.required, Validators.min(1)]),
+    consent: new FormControl(false, Validators.requiredTrue)
+   });
 
-  patient = {
+   private http = inject(HttpClient);
+   private router = inject(Router);
 
-    nom: '',
-    prenom: '',
-    age: '',
-    adresse: '',
-    telephone: ''
+   inputFormpatient() {
+    // Vérifier si le formulaire est valide
+    if (this.formPatient.invalid) {
+      console.log('Formulaire invalide');
+      alert('Veuillez remplir tous les champs');
+      return;
+    }
 
-  };
-
-  ajouterPatient() {
-
-    console.log(this.patient);
-
-    alert("Patient ajouté avec succès");
-
-  }
-
+    const data = this.formPatient.value;
+    console.log('Données envoyées :', data);
+    
+    this.http.post('http://localhost:3000/patients', data).subscribe({
+      next: (res) => {
+        console.log('Patient ajouté :', res);
+        alert('Patient ajouté avec succès !');
+        this.formPatient.reset();
+        this.router.navigate(['/patient']);
+      },
+      error: (err) => {
+        console.log('Erreur :', err);
+        alert('Erreur : ' + err.message);
+      }
+    });
+   }
 }

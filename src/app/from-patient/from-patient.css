@@ -1,26 +1,115 @@
+/* Conteneur principal */
 .container {
-
-width: 400px;
-margin: auto;
-
+  max-width: 600px;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Style des champs input */
 input {
-border-radius: 9px;
-border: 1px solid #787878;
-width: 110%;
-margin-bottom: 10px;
-padding: 8px;
-
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px 12px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+input:focus {
+  outline: none;
+  border-color: #319ddc;
+  box-shadow: 0 0 0 3px rgba(49, 157, 220, 0.2);
+}
+
+/* Labels */
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+/* Bouton */
 button {
+  background: #319ddc;
+  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 10px;
+}
 
-background: rgb(49, 157, 220);
-border-radius: 10px;
-color: white;
-padding: 10px;
-border: none;
-width: 50%;
+button:hover {
+  background: #2273a3;
+}
 
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Checkbox */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.form-check input {
+  width: auto;
+  margin-bottom: 0;
+}
+
+.form-check label {
+  margin-bottom: 0;
+}
+
+/* Message d'erreur (optionnel) */
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  button {
+    padding: 12px;
+  }
+}
+
+/* Layout pour les champs côte à côte (Nom/Prenom) */
+.row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.row input {
+  width: 100%;
 }
