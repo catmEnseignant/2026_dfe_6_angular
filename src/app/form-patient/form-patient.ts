@@ -24,9 +24,11 @@ export class FormPatient {
 
   inputFormpatient() {
     const data = this.formPatient.value;
+    (data as any).id = Date.now().toString(36);
     this.http.post('http://localhost:3000/patients', data).subscribe({
       next: (res) => {
         console.log('Patient ajouté:', res);
+        this.formPatient.reset();
         this.router.navigate(['/patient']);
       },
       error: (err) => {
@@ -35,3 +37,4 @@ export class FormPatient {
     });
   }
 }
+

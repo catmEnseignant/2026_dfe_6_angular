@@ -24,19 +24,18 @@
                     <th scope="col">#</th>
                     <th scope="col">Prenom</th>
                     <th scope="col">Nom</th>
-                    <th scope="col">Email</th>
+    <th scope="col">Email</th>
                 </tr>
             </thead>
             
             <tbody>
-                @for(item of patients2 ;track $index) {
-                    <tr>
-                        <th scope="row">{{ item.id }}</th>
-                        <td>{{ item.prenom }}</td>
-                        <td>{{ item.nom }}</td>
-                        <td> {{ item.email }} </td>
-                    </tr>
-                }
+@for(item of patients2 ;track item.id) {
+  <tr>
+    <th scope="row">{{ item.id }}</th>
+    <td>{{ item.prenom }}</td>
+    <td>{{ item.nom }}</td>
+    <td>{{ item.email }}</td>
+  </tr>}
             </tbody>
         </table>
     </div>
