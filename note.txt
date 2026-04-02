@@ -1,0 +1,28 @@
+en angular le composant app ets le composant principal
+si je veux inclure un composant dans un autre composant je l'import d'abord dans l'autre fichier ppuis j'utilise les balise 
+<app><app/> pour l'affichage
+les trois interaction qui es
+l'esterpelation est le fait d'aler sur la partie html et {
+    metre des attributs
+}
+npm install -g json-server
+json-server --watch db.json --port 3000
+# Créer un dossier back-end
+mkdir back-end
+cd back-end
+
+# Initialiser le projet Node.js
+npm init -y
+
+# Installer Express
+npm install express cors body-parser
+
+# Créer le fichier server.js
+
+ comment récupérer des informations depuis une API (sûrement votre backend http://localhost:3000/patients) dans Angular.
+ on utilise les requete http
+
+ composant principal on peut y inclured'autre composant, il y'a des composant qui sont echangeable, 
+ le routage on defini la route
+ pour configurer une requet on va sur app.config.ts pour le declarer ,on fait l'implementations,il faut toujour uliser un objet 
+ httpclient , 

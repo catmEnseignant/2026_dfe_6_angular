@@ -33,7 +33,7 @@
 
       <tbody>
         <!-- affichage dynamique -->
-        @for (patient of patients2; track patient.id) {
+        @for (patient of tableauPatients2 ; track patient.id) {
           <tr>
             <th scope="row">{{$index + 1}}</th>
             <td>{{patient.nom}}</td>

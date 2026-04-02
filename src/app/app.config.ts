@@ -10,6 +10,8 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes), provideClientHydration(withEventReplay()) ,
-    provideHttpClient() 
+    provideHttpClient() , // configure le client HTTP pour l'application Angular,permettant ainsi de faire des requêtes HTTP vers des API ou des serveurs.
+    Patient
+    
   ]
 };
