@@ -34,6 +34,7 @@ export class Patient implements OnInit{
     });
   }
 
+  
   getSomme(a:number ,b:number){
   return a+b
   }
