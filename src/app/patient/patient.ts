@@ -12,10 +12,11 @@ import { Router } from '@angular/router';
 // l'interface OnInit permet de charger la page des contenus des methodes qui ne necessitent aucune action pour s'afficher  
 export class Patient implements OnInit {
   title = 'Patients';
-
+  
   patients2 :any = []
 
   // HttpClient (classe) permet d'afficher le contenu depuis la base vers la page html
+  // le constructor permet d'utiliser les methodes ou attributs d'une autre classe comme appartenent à la classe actuelle
   constructor(private route:  Router, private http: HttpClient) {}
 
   // ngOnInit est une methide abstraite de l'interface OnInit donc qui a besoin d'être declarer dans la classe concrete
@@ -24,9 +25,11 @@ export class Patient implements OnInit {
     this.getPatients().subscribe(res => {
       console.log(res)
       this.patients2 = res
+    }, err => {
+      console.log(err)
     }) 
   }
-
+ 
   getSomme(a: number, b:number) :number {
     return a + b
   }

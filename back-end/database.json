@@ -1,46 +1,54 @@
 {
-    "patients" : [
-        {
-            "id": 1,
-            "nom": "Sy",
-            "prenom": "Awa",
-            "email": "awaSy@gmail.com",
-            "age": 50
-        },
-        {
-            "id": 2,
-            "nom": "Faye",
-            "prenom": "Dieynaba",
-            "email": "dieyna@gmail.com",
-            "age": 20
-        },
-        {
-            "id": 3,
-            "nom": "Samba",
-            "prenom": "Mamadou",
-            "email": "mamadou@gmail.com",
-            "age": 30
-        },
-        {
-            "id": 4,
-            "nom": "Niang",
-            "prenom": "Cheikh Omar",
-            "email": "omar@gmail.com",
-            "age": 21
-        },
-        {
-            "id": 5,
-            "nom": "Thiombane",
-            "prenom": "Baye",
-            "email": "thioms@gmail.com",
-            "age": 20
-        },
-        {
-            "id": 6,
-            "nom": "Diop",
-            "prenom": "Khardiata",
-            "email": "khady@gmail.com",
-            "age": 24
-        }
-    ]
+  "patients": [
+    {
+      "id": "1",
+      "nom": "Sy",
+      "prenom": "Awa",
+      "email": "awaSy@gmail.com",
+      "age": 50
+    },
+    {
+      "id": "2",
+      "nom": "Faye",
+      "prenom": "Dieynaba",
+      "email": "dieyna@gmail.com",
+      "age": 20
+    },
+    {
+      "id": "3",
+      "nom": "Samba",
+      "prenom": "Mamadou",
+      "email": "mamadou@gmail.com",
+      "age": 30
+    },
+    {
+      "id": "4",
+      "nom": "Niang",
+      "prenom": "Cheikh Omar",
+      "email": "omar@gmail.com",
+      "age": 21
+    },
+    {
+      "id": "5",
+      "nom": "Thiombane",
+      "prenom": "Baye",
+      "email": "thioms@gmail.com",
+      "age": 20
+    },
+    {
+      "id": "6",
+      "nom": "Diop",
+      "prenom": "Khardiata",
+      "email": "khady@gmail.com",
+      "age": 24
+    },
+    {
+      "id": "f292",
+      "prenom": "Ababacar",
+      "nom": "Samba",
+      "email": "babacar@gmail.com",
+      "age": 20
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
