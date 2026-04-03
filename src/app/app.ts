@@ -6,7 +6,7 @@ import { Footer } from './footer/footer';
 
 @Component({
   selector: 'app-root', // c'est le nom du composant
-  imports: [Navbar, Sidebar, Footer], // c'est les composants qui sont utilisés dans ce composant
+  imports: [RouterOutlet, Navbar, Sidebar, Footer], // c'est les composants qui sont utilisés dans ce composant
   templateUrl: './app.html', // C'est le fichier html de ce selecteur
   styleUrl: './app.css' // C'est le fichier css
 })

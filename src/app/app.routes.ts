@@ -9,4 +9,5 @@ export const routes: Routes = [
 
     {path: 'form-patient', component: FormPatient}, // form-patient : c'est le chemin d'URL pour accéder au composant FormPatient, et component: FormPatient indique que lorsque l'utilisateur navigue vers ce chemin, le composant FormPatient sera affiché.
     {path: 'ajouter-patient', component: FormPatient}, // et path: 'ajouter-patient' indique que lorsque l'utilisateur navigue vers ce chemin, le composant FormPatient sera affiché.
+    
 ];
