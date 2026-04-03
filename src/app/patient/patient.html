@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-5">
+                @if (title=='patient'){
+                    <h5 >{{title}}</h5>
+                }
+                </div>
+                
+            <div class="col-3">
+                <input class="form-control mr-sm-2" type="search" [placeholder]="getEmail()" aria-label="Search">
+            </div>
+            <div class="col-4">
+                <button class="btn btn-outline-success my-2 my-sm-0" (click)="getInfoPatient()">Ajouter un patient</button>
+            </div>
+        <div class="card-body"> 
+                <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">prenom</th>
+                                <th scope="col">nom</th>
+                                <th scope="col">email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for(item of tableauPatients2; track $index){
+
+                                    <tr>
+                                        <th scope="row">{{$index}}</th>
+                                        <td>{{item.prenom}}</td>
+                                        <td>{{item.nom}}</td>
+                                        <td>{{item.email}}</td>
+                                        
+                                    </tr>
+
+                                }
+                               
+                                <tr>
+                                <th scope="row">{{getSomme(2,3)}}</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                </tr>
+                                <tr>
+                                <th scope="row">{{getEmail()}}</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                </table>
+        </div>
+       </div>
+        
+        
+
+    </div>
+</div>

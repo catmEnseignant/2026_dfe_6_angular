@@ -1,0 +1,76 @@
+{
+  "patients": [
+    {
+      "prenom": "paya",
+      "nom": "niang",
+      "email": "p.niang04@gmail,com",
+      "age": 34,
+      "id": "c037"
+    },
+    {
+      "prenom": "modou",
+      "nom": "sarr",
+      "email": "sarr.f@gmail.com",
+      "age": 34,
+      "id": "9b00"
+    },
+    {
+      "prenom": "bamba",
+      "nom": "niang",
+      "email": "p.niang04@getMaxListeners    .com",
+      "age": 34,
+      "id": "38d5"
+    },
+    {
+      "prenom": "fatou",
+      "nom": "sarr",
+      "email": "f.s@gmail.com",
+      "age": 30,
+      "id": "4c89"
+    },
+    {
+      "prenom": "khady",
+      "nom": "mbaye",
+      "email": "p.niang04@getMaxListeners    .com",
+      "age": 34,
+      "id": "690e"
+    },
+    {
+      "prenom": "bineta",
+      "nom": "sarr",
+      "email": "hh@kldkj.com",
+      "age": 34,
+      "id": "db2d"
+    },
+    {
+      "id": "b706",
+      "prenom": "coumba",
+      "nom": "cissokho",
+      "email": "c.cissokho6@isepat.edu.sn",
+      "age": "50"
+    },
+    {
+      "id": "58d3",
+      "prenom": "coumba",
+      "nom": "cissokho",
+      "email": "c.cissokho6@isepat.edu.sn",
+      "age": "50"
+    },
+    {
+      "id": "9a1d",
+      "prenom": "Haby",
+      "nom": "Niang",
+      "email": "haby2gmail.com",
+      "age": "34"
+    }
+  ],
+  "Parents": {
+    "pere": {
+      "prenom": "mamadou",
+      "nom": "niang",
+      "email": "m.niang04@gmail,com",
+      "age": 34
+    }
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}
