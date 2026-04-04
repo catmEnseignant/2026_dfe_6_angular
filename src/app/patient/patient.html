@@ -4,7 +4,7 @@
       <div class="col-5">
         @if (title == 'patients') {
          <h5>{{ title }}</h5>
-        }@else {
+        } @else {
           <h5>patients</h5>
         }
 
@@ -28,7 +28,7 @@
         </tr>
       </thead>
       <tbody>
-        @for (item of patient ; track $index ){
+        @for (item of patient; track $index ){
 
         <tr>
           <th scope="col">{{$index+1 }}</th>

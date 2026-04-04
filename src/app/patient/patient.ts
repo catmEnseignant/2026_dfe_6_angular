@@ -9,6 +9,7 @@ import { Router, RouterOutlet } from '@angular/router';
   styleUrl: './patient.css',
 })
 export class Patient {
+  
   title = "patients";
 
   patients ={}
