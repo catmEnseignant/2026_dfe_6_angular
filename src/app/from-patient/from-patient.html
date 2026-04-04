@@ -1,37 +1,37 @@
-<form class="row row-cols-lg-auto g-3 align-items-center">
-  <div class="col-12">
-    <form class="row row-cols-lg-auto g-3 align-items-center p-3 border rounded shadow" style="max-width: 600px; margin:auto;">
-  
-  <!-- Nom -->
-  <div class="col-12">
-    <label class="visually-hidden" for="nomInput">Nom</label>
-    <div class="input-group">
-      <div class="input-group-text">@</div>
-      <input type="text" class="form-control border-primary" id="nomInput" placeholder="Nom">
+<div class="container mt-4">
+  <h3 class="mb-4">Formulaire Patient</h3>
+
+  <form [formGroup]="formPatient" (ngSubmit)="inputFormPatient()">
+    <div class="mb-3">
+      <label class="form-label">Nom</label>
+      <input type="text" class="form-control" id="inputNom" formControlName="nom" placeholder="Entrer le nom">
     </div>
-  </div>
 
-  <!-- Prénom -->
-  <div class="col-12">
-    <label class="visually-hidden" for="prenomInput">Prénom</label>
-    <div class="input-group">
-      <div class="input-group-text">@</div>
-      <input type="text" class="form-control border-primary" id="prenomInput" placeholder="Prénom">
+    <div class="mb-3">
+      <label class="form-label">Prénom</label>
+      <input type="text" class="form-control" id="inputPrenom" formControlName="prenom" placeholder="Entrer le prénom">
     </div>
-  </div>
 
-  <!-- Email -->
-  <div class="col-12">
-    <label class="visually-hidden" for="emailInput">Email</label>
-    <div class="input-group">
-      <div class="input-group-text">@</div>
-      <input type="email" class="form-control border-primary" id="emailInput" placeholder="Email">
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" formControlName="mail" placeholder="Entrer l'email">
     </div>
-  </div>
 
-  <!-- Bouton -->
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary w-100">Envoyer</button>
-  </div>
+    <div class="mb-3">
+      <label class="form-label">Âge</label>
+      <input type="number" class="form-control" id="inputAge" formControlName="age" placeholder="Entrer l'âge">
+    </div>
 
-</form>
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="checkbox" id="check1">
+      <label class="form-check-label" for="check1">
+        Accepter les conditions
+      </label>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">
+      Enregistrer
+    </button>
+  </form>
+</div>
