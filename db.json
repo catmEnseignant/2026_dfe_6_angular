@@ -1,0 +1,18 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "nom": "Ba",
+      "prenom": "Kadidia",
+      "email": "kadidia@gmail.com",
+      "age": 20
+    },
+    {
+      "id": 2,
+      "nom": "Diop",
+      "prenom": "Mamadou",
+      "email": "mamadou@gmail.com",
+      "age": 21
+    }
+  ]
+}
