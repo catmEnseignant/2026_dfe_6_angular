@@ -1,38 +1,55 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-patient',
-  imports: [],  // Pas besoin d'imports supplémentaires ici si Router est fourni globalement
+  imports: [],
   templateUrl: './patient.html',
   styleUrl: './patient.css',
 })
-export class Patient {
-  
-  title = "patients";
+export class Patient implements OnInit
+{
+  title = 'Patients';
 
-  // Correction : patients doit être un TABLEAU, pas un objet
-  patients = [
-    { id: 1, prenom: 'Kadidia', nom: 'Ba', email: 'kadidia@gmail.com', age: 20 },
-    { id: 2, prenom: 'Mamadou', nom: 'Diop', email: 'mamadou@gmail.com', age: 21 }
-  ];
 
-  nombrePatients = 100;
-  prenom = "Khadija";
-  nom = "Ba";
-  email = "Kadidia@34gmail.com"
-
-  constructor(private router: Router) { }
-
-  getSomme(a: number, b: number): number {
-    return a + b;
+tableauPatients2 :any = [];
+ 
+  constructor(private router: Router,private http:HttpClient) {
+    
   }
 
-  getEmail(): string {
-    return "Khadija@gmail.com ";
+  ngOnInit(): void {
+    console.log ("tester la methode");
+    this.getPatients().subscribe({
+      next: (res) => {
+        console.log('Données reçues:', res);
+        this.tableauPatients2 = res;
+      },
+      error: (err) => {
+        console.error('Erreur lors de la récupération des patients:', err);
+      }
+    });
   }
 
-  getInfoPatient() {
-    this.router.navigate(['/direction']);
-  }
+getSomme(a: number, b: number): number{
+  return a + b;
+}
+getEmail():string{
+  return"seck@mail.com";
+}
+
+getInfoPatient(){
+  this.router.navigate(['direction']);
+
+}
+
+ getPatients(){
+   return this.http.get("http://localhost:3000/patients");
+   
+ }
+
+
+
 }
