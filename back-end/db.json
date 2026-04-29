@@ -1,31 +1,24 @@
 {
-<<<<<<< Updated upstream
-    "patients": [
-        {"id": 1, "nom": "Ba", "prenom": "Kadidia", "mail": "Kadi@gmail.com", "age": 20},
-        {"id": 2, "nom": "Niang", "prenom": "Haby", "mail": "Habyi@gmail.com", "age": 22},
-        {"id": 3, "nom": "Ba", "prenom": "Aminataa", "mail": "Amy@gmail.com", "age": 23}
-    ]
-=======
   "patients": [
     {
       "id": "1",
-      "nom": "Raby",
-      "prenom": "Ngaido",
-      "mail": "Raby@example.com",
-      "age": 21
+      "nom": "Ba",
+      "prenom": "Kadidia",
+      "mail": "Kadi@gmail.com",
+      "age": 20
     },
     {
       "id": "2",
-      "nom": "Haby",
-      "prenom": "Niang",
-      "mail": "Haby@example.com",
+      "nom": "Niang",
+      "prenom": "Haby",
+      "mail": "Habyi@gmail.com",
       "age": 22
     },
     {
       "id": "3",
-      "nom": "Aminata",
-      "prenom": "Ba",
-      "mail": "Amina@example.com",
+      "nom": "Ba",
+      "prenom": "Aminataa",
+      "mail": "Amy@gmail.com",
       "age": 23
     },
     {
@@ -36,7 +29,7 @@
       "age": 20
     },
     {
-      "prenom": "kane",
+      "prenom": "Kane",
       "nom": "Haby",
       "mail": "Haby@gmail.com",
       "age": 20,
@@ -58,5 +51,4 @@
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
->>>>>>> Stashed changes
 }
