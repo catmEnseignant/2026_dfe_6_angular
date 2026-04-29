@@ -1,5 +1,135 @@
+🔹 1. Interpolation {{ }} → afficher une valeur
+📌 Utilisation :
+
+Quand tu veux afficher une donnée dans le HTML
+
+Exemple :
+<h1>{{ titre }}</h1>
+<p>{{ user.name }}</p>
+👉 Cas typiques :
+afficher un texte
+afficher une variable
+afficher un résultat
+
+🔹 2. Property Binding [ ] → modifier un attribut HTML
+📌 Utilisation :
+
+Quand tu veux donner une valeur à une propriété HTML
+
+Exemple :
+<img [src]="imageUrl">
+<button [disabled]="isDisabled">OK</button>
+👉 Cas typiques :
+image (src)
+disable button
+class dynamique
+style dynamique
+
+🔹 3. Event Binding ( ) → écouter une action utilisateur
+📌 Utilisation :
+
+Quand tu veux réagir à un événement
+
+Exemple :
+<button (click)="onClick()">Clique moi</button>
+<input (keyup)="onKeyUp()">
+👉 Cas typiques :
+clic
+saisie clavier
+souris
+submit formulaire
+
+🔹 4. Two-way Binding [( )] → synchronisation automatique
+📌 Utilisation :
+
+Quand tu veux lier HTML + variable en même temps
+
+Exemple :
+<input [(ngModel)]="nom">
+<p>{{ nom }}</p>
+👉 Cas typiques :
+formulaires
+input utilisateur
+champs de saisie
+
+
+
+Un composant Angular, c’est le bloc principal de construction d’une application Angular.
+
+🔹 C’est quoi un composant ?
+
+Un composant = une partie de l’interface utilisateur (UI) + sa logique.
+
+👉 Exemple :
+
+un header (menu)
+une page login
+une liste de produits
+un bouton avec comportement
+🔹 Rôle d’un composant
+1. 🖼️ Gérer l’affichage (HTML)
+
+Le composant contrôle ce que l’utilisateur voit.
+
+<h1>Bienvenue</h1>
+2. 🧠 Gérer la logique (TypeScript)
+
+Il contient les variables et fonctions.
+
+titre = "Accueil";
+
+onClick() {
+  console.log("cliqué");
+}
+3. 🔄 Relier HTML + logique
+
+Il connecte le HTML et le TypeScript.
+
+<h1>{{ titre }}</h1>
+<button (click)="onClick()">OK</button>
+4. 🧩 Réutilisabilité
+
+Un composant peut être utilisé plusieurs fois.
+
+Exemple :
+
+<app-navbar>
+<app-card>
+<app-footer>
+🔹 Structure d’un composant
+
+Chaque composant Angular a 3 fichiers :
+
+component.ts   → logique
+component.html → interface
+component.css  → style
+🔹 Résumé simple
+
+👉 Un composant sert à :
+
+afficher une partie de la page
+gérer sa logique
+être réutilisé
+🧠 Image mentale :
+
+👉 Angular = LEGO
+👉 Composant = une brique LEGO
+👉 Application = assemblage de toutes les briques
+
+
+
+
+
+
+
+
+
+
+
+
 en angular le composant app ets le composant principal
-si je veux inclure un composant dans un autre composant je l'import d'abord dans l'autre fichier ppuis j'utilise les balise 
+si je veux inclure un composant dans un autre composant je l'import d'abord dans l'autre fichier 
+puis j'utilise les balise 
 <app><app/> pour l'affichage
 les trois interaction qui es
 l'esterpelation est le fait d'aler sur la partie html et {
@@ -10,6 +140,7 @@ json-server --watch db.json --port 3000
 # Créer un dossier back-end
 mkdir back-end
 cd back-end
+npx json-server --watch db.json --port 3000
 
 # Initialiser le projet Node.js
 npm init -y
@@ -26,3 +157,102 @@ npm install express cors body-parser
  le routage on defini la route
  pour configurer une requet on va sur app.config.ts pour le declarer ,on fait l'implementations,il faut toujour uliser un objet 
  httpclient , 
+
+ interpolation avec les attributs et expressions
+ 1. Interpolation
+
+Utilisée pour afficher des données du composant dans le HTML.
+🔹 1. Interpolation vs Property Binding
+✅ Interpolation
+Syntaxe : {{ valeur }}
+S
+
+ interpolation avec des methodes
+ -Property Binding
+ ✅ Property Binding
+Syntaxe : [propriete]="valeur"
+Sert à lier une propriété HTML à une variable
+2. Property Binding
+
+Permet de lier une propriété HTML à une variable TypeScript.
+
+Syntaxe :
+
+Difference entre interpolation et property binding:
+⚡ Différence principale :
+Interpolation → affichage texte
+Property binding → contrôle des propriétés HTML
+-Event binding
+-Two-way binding
+
+3. Two-way Binding
+Syntaxe : [(ngModel)]="variable"
+
+⚡ Résumé rapide :
+Type	Syntaxe	Sens
+Interpolation	{{ }}	TS → HTML(Les accolades {})
+Property binding	[ ]	TS → HTML([] s’appelle des crochets)
+Event binding	( )	HTML → TS
+Two-way binding [( )]↔ (les deux)
+
+ANGULAR - SYNTAXE PRINCIPALE
+
+{{ }}   → Interpolation
+          (afficher une donnée TS dans HTML {{ }} → afficher)
+          ex: {{ nom }}
+
+[ ]     → Property Binding
+          (lier une propriété HTML  [ ] → envoyer une valeur vers le HTML)
+          ex: [src]="imageUrl"
+
+( )     → Event Binding
+          (réagir à un événement ( ) → écouter un événement)
+          ex: (click)="fonction()"
+
+[( )]   → Two-way Binding
+          (liaison dans les deux sens  [( )] → les deux en même temps)
+          ex: [(ngModel)]="nom"
+
+------------------------------------------------
+
+AUTRES SYMBOLES
+
+{ }     → Objet JavaScript
+ex: { nom: "Ali" }
+
+[ ]     → Tableau JavaScript
+ ex: [1, 2, 3]
+
+ 🧠 Astuce pour mémoriser :
+{{ }} → afficher
+[ ] → envoyer une valeur vers le HTML
+( ) → écouter un événement
+
+🔹 5. HTTP (API)
+
+📥 Récupérer des données backend
+👉 nécessite HttpClientModule
+this.http.get("http://api.com/users")
+
+
+🔹 6. Routing (navigation)
+
+🧭 Changer de page sans recharger
+{ path: 'home', component: HomeComponent }
+<a routerLink="/home">Home</a>
+
+4. Services
+
+📡 Pour partager des données
+
+utilisé pour API / logique métier
+injection dans les composants :ng generate service nom
+🔹 2. Directives Angular
+✔ Structure / logique HTML *ngIf /*ngFor
+methodes onginit
+
+un observable subscribe a deux parametres qui son des fonctions
+pour les formulaire 
+consepte de base de la programmation
+ 
+

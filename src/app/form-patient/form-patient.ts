@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router'; // ✅ corrigé
 
 @Component({
+  standalone: true, 
   selector: 'app-form-patient',
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './form-patient.html',

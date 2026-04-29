@@ -1,55 +1,70 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { error } from 'console';
-
+import { PatientService } from '../patient-service';
 
 @Component({
+  standalone: true,
   selector: 'app-patient',
   imports: [],
   templateUrl: './patient.html',
   styleUrl: './patient.css',
 })
 
-export class Patient implements OnInit
-{
+export class Patient implements OnInit {
+
   title = 'Patients';
 
+  // ✅ tableau réel pour @for
+ tableauPatients2: any[] = [];
 
-  tableauPatients2 :any = [];
-  
-  constructor(private router: Router,private http:HttpClient) {}
+  constructor(
+    private router: Router,
+    private http: HttpClient,
+    private patientService: PatientService
 
+
+  ) {
+
+
+
+
+  }
+
+
+  // ✅ Angular reconnaît cette méthode
   ngOnInit(): void {
-    console.log ("tester la methode");
-    this.getPatients().subscribe(res => {
-      console.log (res);
-      this.tableauPatients2 = res;
-      console.log(this.tableauPatients2);
-    }, error=>{
-      console.log("erreur lors de la récupération des patients");   
-      console.log(error);
+    this.loadPatients();
+    
+  }
+
+  // ✅ chargement asynchrone correct
+  loadPatients(): void {
+    this.patientService.getPatients().subscribe({
+      next: (res: any[]) => {
+        this.tableauPatients2 = res;
+      },
+      error: (err) => {
+        console.log("Erreur récupération patients");
+        console.log(err);
+      }
     });
   }
 
-  getSomme(a: number, b: number): number{
+ /* getPatients() {
+    return this.http.get<any[]>("http://localhost:3000/patients");
+  }*/
+
+  getSomme(a: number, b: number): number {
     return a + b;
   }
-  getEmail():string{
-    return"seck@mail.com";
+
+  getEmail(): string {
+    return "seck@mail.com";
   }
 
-  getInfoPatient(){
+  getInfoPatient(): void {
     this.router.navigate(['form-patient']);
-    
-
   }
-
-  getPatients(){
-    return this.http.get("http://localhost:3000/patients");
-    
-  }
-
-
 
 }

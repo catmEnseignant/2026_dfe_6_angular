@@ -1,11 +1,84 @@
 {
-    "patients":[
-        {"id":1, "nom": "Gadiaga","prenom": "Khady", "email": "khady.gadiaga@mainModule.com"},
-        {"id":2, "nom": "Diallo","prenom": "Mamadou", "email": "mamadou.diallo@mainModule.com"},
-        {"id":3, "nom": "Sarr","prenom": "Awa", "email": "awa.sarr@mainModule.com"},
-        {"id":4, "nom": "Diop","prenom": "Ousmane", "email": "ousmane.diop@mainModule.com"},
-        {"id":5, "nom": "Fall","prenom": "Fatou", "email": "fatou.fall@mainModule.com"}             
-    ]
-
-   
+  "patients": [
+    {
+      "id": "1",
+      "nom": "Gadiaga",
+      "prenom": "Khady",
+      "email": "khady.gadiaga@mainModule.com"
+    },
+    {
+      "id": "2",
+      "nom": "Diallo",
+      "prenom": "Mamadou",
+      "email": "mamadou.diallo@mainModule.com"
+    },
+    {
+      "id": "3",
+      "nom": "Sarr",
+      "prenom": "Awa",
+      "email": "awa.sarr@mainModule.com"
+    },
+    {
+      "id": "4",
+      "nom": "Diop",
+      "prenom": "Ousmane",
+      "email": "ousmane.diop@mainModule.com"
+    },
+    {
+      "id": "5",
+      "nom": "Fall",
+      "prenom": "Fatou",
+      "email": "fatou.fall@mainModule.com"
+    },
+    {
+      "prenom": "Modou Moustapha",
+      "nom": "Fall",
+      "email": "m@gmail.com",
+      "age": 26,
+      "id": "sjdU3VWwHyg"
+    },
+    {
+      "prenom": "Abdallah",
+      "nom": "Sakur",
+      "email": "abdou@gmail.com",
+      "age": 20,
+      "id": "3YkWNAY--r0"
+    },
+    {
+      "prenom": "Faye",
+      "nom": "Maurise",
+      "email": "m@gamil.com",
+      "age": 40,
+      "id": "l71p8aLZ21E"
+    },
+    {
+      "prenom": "Ndeye Fatou",
+      "nom": "Loum",
+      "email": "nfatou@gmail.com",
+      "age": 27,
+      "id": "UHu4-gwJI74"
+    },
+    {
+      "prenom": "Ndiaye",
+      "nom": "M",
+      "email": "m@gamil.com",
+      "age": 30,
+      "id": "oZv45FxkkCA"
+    },
+    {
+      "prenom": "Soda",
+      "nom": "Gadiaga",
+      "email": "soda@gmail.com",
+      "age": 27,
+      "id": "7gDvOTXpMA4"
+    },
+    {
+      "prenom": "Abdou",
+      "nom": "Diouf",
+      "email": "abdou@gamil.com",
+      "age": 26,
+      "id": "4pjC70jFN2s"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
