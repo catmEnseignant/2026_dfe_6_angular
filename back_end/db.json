@@ -1,9 +1,51 @@
-
 {
-    "patient":[
-        {"id":1,"prenom":"Dieyna","nom":"Faye","email":"dieynabaf741@gmail.com"},
-        {"id":2,"prenom":"Binetou","nom":"Dieye","email":"binetou@gmail.com"},
-        {"id":3,"prenom":"Ndeye Fatou","nom":"Faye","email":"ndeye@gmail.com"}
-        
-    ]
+  "patients": [
+    {
+      "id": "1",
+      "prenom": "Dieyna",
+      "nom": "Faye",
+      "email": "dieynabaf741@gmail.com"
+    },
+    {
+      "id": "2",
+      "prenom": "Binetou",
+      "nom": "Dieye",
+      "email": "binetou@gmail.com"
+    },
+    {
+      "id": "3",
+      "prenom": "Ndeye Fatou",
+      "nom": "Faye",
+      "email": "ndeye@gmail.com"
+    },
+    {
+      "id": "4d36",
+      "prenom": "Dieynaba",
+      "nom": "FAYE",
+      "email": "dieynabaf741@gmail.com",
+      "age": 5
+    },
+    {
+      "id": "4f1e",
+      "prenom": "",
+      "nom": "khard",
+      "email": "",
+      "age": ""
+    },
+    {
+      "id": "f931",
+      "prenom": "diop",
+      "nom": "khardiata",
+      "email": "khardiata@gmail.com",
+      "age": 5
+    },
+    {
+      "id": "897b",
+      "prenom": "samba",
+      "nom": "palaye",
+      "email": "palaye@gmail.com",
+      "age": 7
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
