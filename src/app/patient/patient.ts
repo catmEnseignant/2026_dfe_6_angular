@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PatientService } from '../patient-service';
 
 @Component({
   selector: 'app-patient',
@@ -21,16 +22,20 @@ export class Patient implements OnInit{
   nom='Faye';
 
   email='dieynabaf@gmail.com';
-  constructor(private router:Router,private http:HttpClient){
+  constructor(
+    private router:Router,
+    private http:HttpClient,
+    private service:PatientService){
 
   }
+  
   // ngOnInit est une methode abstraite de l'interface Onite donc qui a besoin d'etre declare
 
   ngOnInit(): void {
     console.log("tester la methode")
-    this.getPatient().subscribe(res => {
+    this.service.getPatients().subscribe(res => {
       console.log(res)
-      this.patients2=res
+      this.patients2=res;
     });
   }
 
@@ -44,10 +49,8 @@ export class Patient implements OnInit{
   getInfoPatient(){
     this.router.navigate(['direction'])
   }
-  getPatient(){
-    return this.http.get("http://localhost:3000/patient")
-    
-}
+  
+  
     
 
 }
