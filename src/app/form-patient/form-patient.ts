@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PatientService } from '../patient-service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form-patient',
@@ -18,8 +19,9 @@ export class FormPatient {
     age : new FormControl('')
   })
 
-  private http = inject(HttpClient) 
+  private http = inject(HttpClient)
   private route = inject(Router)
+  private servicePatient = inject(PatientService)
 
   inputFormPatient() {
     console.log("Tester la methode inputform")
@@ -30,7 +32,7 @@ export class FormPatient {
       console.log(res)
       this.route.navigate(['/patient'])
     }, err => {
-      console.log("Erreur lors de l'ajout")
+      console.log("Erreur lors de l'ajout") 
       console.log(err)
     })
   }

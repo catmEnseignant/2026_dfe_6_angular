@@ -30,7 +30,7 @@
             </thead>
             
             <tbody>
-                @for(item of patients2 ;track $index) {
+                @for(item of patients2 | async ;track $index) {
                     <tr>
                         <th scope="row">{{ item.id }}</th>
                         <td>{{ item.prenom }}</td>

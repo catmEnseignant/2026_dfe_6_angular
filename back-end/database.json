@@ -48,6 +48,27 @@
       "nom": "Samba",
       "email": "babacar@gmail.com",
       "age": 20
+    },
+    {
+      "id": "d9ce",
+      "prenom": "Ousmane",
+      "nom": "Sy",
+      "email": "ousmaneSy@gmail.com",
+      "age": 24
+    },
+    {
+      "id": "2f40",
+      "prenom": "Aminata",
+      "nom": "Diallo",
+      "email": "aminata@gmail.com",
+      "age": 100
+    },
+    {
+      "id": "cfbd",
+      "prenom": "Aminata",
+      "nom": "Diallo",
+      "email": "aminata@gmail.com",
+      "age": 100
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
