@@ -1,18 +1,40 @@
 {
   "patients": [
     {
-      "id": 1,
+      "id": "1",
       "nom": "Ba",
       "prenom": "Kadidia",
       "email": "kadidia@gmail.com",
       "age": 20
     },
     {
-      "id": 2,
+      "id": "2",
       "nom": "Diop",
       "prenom": "Mamadou",
       "email": "mamadou@gmail.com",
       "age": 21
+    },
+    {
+      "prenom": "kadidia",
+      "nom": "Diallo",
+      "email": "kadidia@gmail.com",
+      "age": 20,
+      "id": "RVrlDyrE-kw"
+    },
+    {
+      "prenom": "kadidia",
+      "nom": "Diallo",
+      "email": "kadidia@gmail.com",
+      "age": 20,
+      "id": "1ygda8I3HUk"
+    },
+    {
+      "prenom": "Bocar",
+      "nom": "Ka",
+      "email": "Bocar@gmail.com",
+      "age": 28,
+      "id": "eCKjWn5AdU0"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

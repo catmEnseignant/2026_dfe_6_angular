@@ -20,7 +20,7 @@ tableauPatients2 :any = [];
   constructor(
     private router: Router,
     private http:HttpClient,
-    private patient:PatientService) {
+    private service:PatientService) {
     
   }
 
@@ -48,10 +48,13 @@ getInfoPatient(){
   this.router.navigate(['direction']);
 
 }
-
  getPatients(){
    return this.http.get("http://localhost:3000/patients");
    
+ }
+ getEditPatients(data:any){
+  console.log("test le methode :",data)
+  this.router.navigate(['from-Patient'])
  }
 
 

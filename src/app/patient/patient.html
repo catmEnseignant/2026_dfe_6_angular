@@ -15,6 +15,9 @@
       <div class="col-4">
         <button class="btn btn-primary" (click)="getInfoPatient()">Ajouter un patient</button>
     </div>
+    
+      
+    </div>
   </div>
 
 <div class="card-body">
@@ -26,6 +29,7 @@
           <th scope="col">Nom</th>
           <th scope="col">Email</th>
           <th scope="col">Age</th>
+          <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -37,28 +41,16 @@
           <td>{{item. nom }}</td>
           <td>{{item. email }}</td>
           <td>{{item. age }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="getInfoPatient()">
+          Edit
+        </button>
+          </td>
         </tr>
+
+        
         }
-        <tr>
-          <th scope="row">{{ getSomme(2,3) }}</th>
-          <td>Haby</td>
-          <td>Niang</td>
-          <td>Niang@gmail.com</td>
-          <td>23</td>
-        </tr>
-        <tr>
-          <th scope="row">{{ getEmail() }}</th>
-          <td colspan="2">Aminata</td>
-          <td>Aminata@gmail.com</td>
-          <td>22</td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td>Rougui</td>
-          <td>Dia</td>
-          <td>Rougui@gmail.com</td>
-          <td>22</td>
-        </tr>
+        
       </tbody>
     </table>
   </div>

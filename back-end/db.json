@@ -55,7 +55,15 @@
       "email": "Bocar@gmail.com",
       "age": 25,
       "id": "QRSNuQge4zs"
+    },
+    {
+      "prenom": "Bocar",
+      "nom": "Ka",
+      "email": "Bocar@gmail.com",
+      "age": 27,
+      "id": "Qs7HjVo8_KQ"
     }
+  
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }
