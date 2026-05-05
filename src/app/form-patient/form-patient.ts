@@ -28,8 +28,8 @@ export class FormPatient {
       next: (res) => {
         console.log('Données envoyées avec succès:');
         console.log(res);
-        this.formPatient.reset();  // ✅ Vider le formulaire
-        this.router.navigate(['/patient']);  // ✅ Rediriger vers la liste
+        this.formPatient.reset();  
+        this.router.navigate(['/patient']);  
       },
       error: (err) => {
         console.error('Erreur lors de l\'envoi des données:');
