@@ -7,11 +7,33 @@ import { inject, Injectable } from '@angular/core';
 export class PatientService {
   private http = inject(HttpClient)
 
+  host = "http://localhost:3000"
+
 
   getpatients() {
-    return this.http.get("http://localhost:3000/patient");
+    return this.http.get(this.host + "/patient")
+  }
+
+  storepatient(data: any) {
+    return this.http.post(this.host + "/patient", data);
 
   }
+
+  FinPatient(id: any) {
+    return this.http.get(this.host + "/patient/" + id);
+
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
