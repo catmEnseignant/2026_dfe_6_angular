@@ -1,0 +1,24 @@
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+}
+
+/* lien normal */
+.nav-link {
+  color: white;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+
+/* hover */
+.nav-link:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* actif (quand tu cliques) */
+.nav-link.active {
+  background-color: #0d6efd;
+  color: white !important;
+  font-weight: bold;
+}

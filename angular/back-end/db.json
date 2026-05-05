@@ -1,0 +1,82 @@
+{
+  "patients": [
+    {
+      "id": "1",
+      "nom": "Niang",
+      "prenom": "Haby",
+      "email": "khady.gadiaga@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "2",
+      "nom": "Diallo",
+      "prenom": "Mamadou",
+      "email": "mamadou.diallo@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "3",
+      "nom": "Sarr",
+      "prenom": "Awa",
+      "email": "awa.sarr@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "4",
+      "nom": "Diop",
+      "prenom": "Ousmane",
+      "email": "ousmane.diop@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "5",
+      "nom": "Ba",
+      "prenom": "Fatou",
+      "email": "fatou.fall@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "4",
+      "nom": "Diop",
+      "prenom": "Ousmane",
+      "email": "ousmane.diop@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "5",
+      "nom": "Ba",
+      "prenom": "Fatou",
+      "email": "fatou.fall@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "4",
+      "nom": "Diop",
+      "prenom": "Ousmane",
+      "email": "ousmane.diop@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "5",
+      "nom": "Ba",
+      "prenom": "Amina",
+      "email": "amina@mainModule.com",
+      "age": 18
+    },
+      {
+      "id": "6",
+      "nom": "Ba",
+      "prenom": "Fatou",
+      "email": "ba@mainModule.com",
+      "age": 20
+    },
+    {
+      "id": "7",
+      "nom": "Ndiaye",
+      "prenom": "Amy",
+      "email": "amy@mainModule.com",
+      "age": 20
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

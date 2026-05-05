@@ -1,0 +1,39 @@
+.navbar-custom {
+  background-color: #212529; /* même que bg-dark Bootstrap */
+  border-bottom: 1px solid #333;
+}
+
+/* SEARCH BOX */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* INPUT */
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  padding: 8px 12px;
+  width: 250px;
+}
+
+.search-box input::placeholder {
+  color: #aaa;
+}
+
+/* BUTTON */
+.search-box button {
+  border: none;
+  background: #0d6efd;
+  color: white;
+  padding: 8px 10px;
+}
+
+.search-box button:hover {
+  background: #0b5ed7;
+}
