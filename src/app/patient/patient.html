@@ -28,6 +28,9 @@
           <th scope="col">Nom</th>
           <th scope="col">Prénom</th>
           <th scope="col">Email</th>
+          <th scope="col">Age</th>
+          <th scope="col">Action</th>
+          
         </tr>
       </thead>
 
@@ -39,6 +42,12 @@
             <td>{{patient.nom}}</td>
             <td>{{patient.prenom}}</td>
             <td>{{patient.email}}</td>
+            <td>{{patient.age}}</td>
+            <td>
+             <button class="btn btn-primary"(click)="editPatient(patient)">
+               Editer
+             </button>
+            </td>
           </tr>
         }
 

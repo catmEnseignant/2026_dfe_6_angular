@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PatientService } from '../patient-service';
@@ -20,11 +19,8 @@ export class Patient implements OnInit {
 
   constructor(
     private router: Router,
-    private http: HttpClient,
-    private patientService: PatientService
 
-
-  ) {
+    private patientService: PatientService ) {
 
 
 
@@ -35,6 +31,7 @@ export class Patient implements OnInit {
   // ✅ Angular reconnaît cette méthode
   ngOnInit(): void {
     this.loadPatients();
+    
     
   }
 
@@ -67,4 +64,8 @@ export class Patient implements OnInit {
     this.router.navigate(['form-patient']);
   }
 
+ editPatient(data: any): void {
+    console.log("tester la methode :", data);//afficher les information du patient dans le console
+    this.router.navigate(['edit-patient', data.id]);
+  }
 }

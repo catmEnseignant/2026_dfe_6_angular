@@ -1,7 +1,5 @@
 🔹 1. Interpolation {{ }} → afficher une valeur
-📌 Utilisation :
-
-Quand tu veux afficher une donnée dans le HTML
+📌 Utilisation :Quand tu veux afficher une donnée dans le HTML
 
 Exemple :
 <h1>{{ titre }}</h1>
@@ -12,9 +10,7 @@ afficher une variable
 afficher un résultat
 
 🔹 2. Property Binding [ ] → modifier un attribut HTML
-📌 Utilisation :
-
-Quand tu veux donner une valeur à une propriété HTML
+📌 Utilisation :Quand tu veux donner une valeur à une propriété HTML
 
 Exemple :
 <img [src]="imageUrl">
@@ -115,15 +111,6 @@ gérer sa logique
 👉 Angular = LEGO
 👉 Composant = une brique LEGO
 👉 Application = assemblage de toutes les briques
-
-
-
-
-
-
-
-
-
 
 
 
@@ -254,5 +241,6 @@ methodes onginit
 un observable subscribe a deux parametres qui son des fonctions
 pour les formulaire 
 consepte de base de la programmation
+// gestion de dependance
  
 
