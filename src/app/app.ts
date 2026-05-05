@@ -8,7 +8,7 @@ import { Content } from "./content/content";
 
 @Component({
   selector: 'app-root',
-  imports: [Patient, Navbar, Sidebar, Footer, Content],
+  imports: [ Navbar, Sidebar, Footer ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

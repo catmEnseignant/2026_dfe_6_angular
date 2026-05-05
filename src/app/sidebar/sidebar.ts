@@ -3,7 +3,7 @@ import { Patient } from '../patient/patient';
 import { Content } from "../content/content";
 @Component({
   selector: 'app-sidebar',
-  imports: [Patient, Content],
+  imports: [Content],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
 })

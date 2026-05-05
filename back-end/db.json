@@ -4,99 +4,107 @@
       "id": "1",
       "nom": "Ba",
       "prenom": "Kadidia",
-      "mail": "Kadi@gmail.com",
+      "email": "Kadi@gmail.com",
       "age": 20
     },
     {
       "id": "2",
       "nom": "Niang",
       "prenom": "Haby",
-      "mail": "Habyi@gmail.com",
+      "email": "Habyi@gmail.com",
       "age": 22
     },
     {
       "id": "3",
       "nom": "Ba",
       "prenom": "Aminataa",
-      "mail": "Amy@gmail.com",
+      "email": "Amy@gmail.com",
       "age": 23
     },
     {
       "id": "4",
       "nom": "Rougui",
       "prenom": "Dia",
-      "mail": "Rougui@example.com",
+      "email": "Rougui@example.com",
       "age": 20
     },
     {
       "prenom": "Kane",
       "nom": "Haby",
-      "mail": "Haby@gmail.com",
+      "email": "Haby@gmail.com",
       "age": 20,
       "id": "VVa9L0InUH0"
     },
     {
       "prenom": "Kane",
       "nom": "Diary",
-      "mail": "Diary@gmail.com",
+      "email": "Diary@gmail.com",
       "age": 21,
       "id": "Y_7T8A1YsPg"
     },
     {
       "prenom": "Ba",
       "nom": "Khadija",
-      "mail": "kadidia@gmail.com",
+      "email": "kadidia@gmail.com",
       "age": 21,
       "id": "h_tG4jt3rf8"
     },
     {
       "prenom": "Khadija",
       "nom": "Ba",
-      "mail": "kadidia@gmail.com",
+      "email": "kadidia@gmail.com",
       "age": 18,
       "id": "pHOgadsBYcQ"
     },
     {
       "prenom": "Khadija",
       "nom": "Ba",
-      "mail": "kadidia@gmail.com",
+      "email": "kadidia@gmail.com",
       "age": 18,
       "id": "eMIfRrz1NpI"
     },
     {
       "prenom": "Khadija",
       "nom": "Ba",
-      "mail": "kadidia@gmail.com",
+      "email": "kadidia@gmail.com",
       "age": 18,
       "id": "-VcxDDWMFGE"
     },
     {
       "prenom": "Khadija",
       "nom": "Ba",
-      "mail": "kadidia@gmail.com",
+      "email": "kadidia@gmail.com",
       "age": 18,
       "id": "vX63rpFTomY"
     },
     {
       "prenom": "Khadija",
       "nom": "Ba",
-      "mail": "kadidia@gmail.com",
+      "email": "kadidia@gmail.com",
       "age": 18,
       "id": "aUayhf2XtuY"
     },
     {
       "prenom": "Khadija",
       "nom": "Ba",
-      "mail": "kadidia@gmail.com",
+      "email": "kadidia@gmail.com",
       "age": 18,
       "id": "y7PvaKNcY_k"
     },
     {
       "prenom": "Khadija",
       "nom": "Ba",
-      "mail": "kadidia@gmail.com",
+      "email": "kadidia@gmail.com",
       "age": 18,
       "id": "AevaaHcr_yg"
+    },
+   
+    {
+      "prenom": "Bocar",
+      "nom": "Ka",
+      "email": "Bocar@gmail.com",
+      "age": 25,
+      "id": "QRSNuQge4zs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

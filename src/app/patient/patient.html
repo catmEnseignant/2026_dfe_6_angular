@@ -25,16 +25,18 @@
           <th scope="col">Prenom</th>
           <th scope="col">Nom</th>
           <th scope="col">Email</th>
+          <th scope="col">Age</th>
         </tr>
       </thead>
       <tbody>
-        @for (item of patients ; track $index ){
+        @for (item of tableauPatients2 ; track $index ){
 
         <tr>
           <th scope="col">{{$index+1 }}</th>
           <td>{{item. prenom }}</td>
           <td>{{item. nom }}</td>
           <td>{{item. email }}</td>
+          <td>{{item. age }}</td>
         </tr>
         }
         <tr>
@@ -42,17 +44,20 @@
           <td>Haby</td>
           <td>Niang</td>
           <td>Niang@gmail.com</td>
+          <td>23</td>
         </tr>
         <tr>
           <th scope="row">{{ getEmail() }}</th>
           <td colspan="2">Aminata</td>
           <td>Aminata@gmail.com</td>
+          <td>22</td>
         </tr>
         <tr>
           <th scope="row"></th>
           <td>Rougui</td>
           <td>Dia</td>
           <td>Rougui@gmail.com</td>
+          <td>22</td>
         </tr>
       </tbody>
     </table>

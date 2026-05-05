@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-content',
-  imports: [Patient,RouterOutlet],
+  imports: [RouterOutlet],
   templateUrl: './content.html',
   styleUrl: './content.css',
 })
