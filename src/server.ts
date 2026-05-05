@@ -27,6 +27,17 @@ const angularApp = new AngularNodeAppEngine();
 /**
  * Serve static files from /browser
  */
+
+
+// ✅ API AVANT TOUT
+app.get('/patients', (req, res) => {
+  res.json([
+    { id: 1, nom: 'Ali' },
+    { id: 2, nom: 'Fatou' },
+  ]);
+});
+
+// ✅ fichiers statiques
 app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
@@ -35,9 +46,7 @@ app.use(
   }),
 );
 
-/**
- * Handle all other requests by rendering the Angular application.
- */
+// ✅ Angular SSR
 app.use((req, res, next) => {
   angularApp
     .handle(req)
@@ -46,13 +55,12 @@ app.use((req, res, next) => {
     )
     .catch(next);
 });
-
 /**
  * Start the server if this module is the main entry point, or it is ran via PM2.
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isMainModule(import.meta.url) || process.env['pm_id']) {
-  const port = process.env['PORT'] || 4000;
+  const port = process.env['PORT'] || 3000;
   app.listen(port, (error) => {
     if (error) {
       throw error;

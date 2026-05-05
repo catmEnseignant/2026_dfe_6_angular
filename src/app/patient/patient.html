@@ -11,9 +11,9 @@
       </div>
       <div class="col-4">
         
-        <button class="btn btn-primary" (click)="getInfoPatient()">Ajouter un patient</button>
-        
+        <button class="btn btn-primary" (click)="getInfoPatient()">Ajouter un patient</button>   
       </div>
+      
     </div>
   </div>
   <div class="card-body"></div>
@@ -25,6 +25,7 @@
              <th scope="col">Prenom</th>
             <th scope="col">Email</th>
             <th scope="col">Âge</th>
+            <th scope="col">Actions</th>
             
           </tr>
         </thead>
@@ -36,6 +37,10 @@
               <td>{{item.nom}}</td>
               <td>{{item.mail}}</td>
               <td>{{item.age}}</td>
+              <td>
+                <button class="btn btn-primary" (click)="getInfoPatient()" >Editer</button>
+                
+              </td>
             </tr>
           }
         </tbody>

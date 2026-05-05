@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PatientService } from '../patient-service';
 @Component({
   selector: 'app-form-patient',
   imports: [CommonModule, ReactiveFormsModule],
@@ -19,27 +20,20 @@ export class FormPatient {
 
    private http = inject(HttpClient);
    private router = inject(Router);
+   private patientService = inject(PatientService);
+
+  
 
   inputFormPatient(){
     console.log("tester");
     console.log(this.formPatient.value);
     let data = this.formPatient.value;
-    this.http.post("http://localhost:3000/patients",data).subscribe({
-      next: (res) => {
-        console.log('Données envoyées avec succès:');
-        console.log(res);
-        this.formPatient.reset();  // ✅ Vider le formulaire
-        this.router.navigate(['/patient']);  // ✅ Rediriger vers la liste
-      },
-      error: (err) => {
-        console.error('Erreur lors de l\'envoi des données:');
-        console.log(err);
-      }
-    });
-
-  
-    
-    
+    this.patientService.storePatient(data).subscribe(()=>
+    console.log("patient enregistré avec succès"));
+    this.router.navigate(['patient']); 
   }
+ 
+
+
 
 }

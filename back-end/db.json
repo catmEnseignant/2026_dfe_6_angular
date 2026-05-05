@@ -2,43 +2,43 @@
   "patients": [
     {
       "id": "1",
-      "nom": "Raby",
-      "prenom": "Ngaido",
-      "mail": "john.doe@example.com",
+      "nom": "Ndao",
+      "prenom": "Yama",
+      "mail": "yama.ndao@example.com",
       "age": 20
     },
     {
       "id": "2",
-      "nom": "Haby",
-      "prenom": "Niang",
-      "mail": "jane.smith@example.com",
+      "nom": "DIOP",
+      "prenom": "YORO",
+      "mail": "yoro.diop@example.com",
       "age": 34
     },
     {
       "id": "3",
-      "nom": "Foutou",
-      "prenom": "Kebe",
-      "mail": "bob.johnson@example.com",
+      "nom": "DIB",
+      "prenom": "DANG",
+      "mail": "dang.dib@example.com",
       "age": 4
     },
     {
       "id": "4",
       "nom": "Amy",
       "prenom": "Ndaiye",
-      "mail": "bob.johnson@example.com",
+      "mail": "AMYNDIAYE@example.com",
       "age": 4
     },
     {
       "prenom": "Dia",
-      "nom": "Dieynaba",
+      "nom": "Sarr",
       "mail": "admin@gmail.com",
       "age": 22,
       "id": "VVa9L0InUH0"
     },
     {
-      "prenom": "Kourssoum",
-      "nom": "sy",
-      "mail": "kour@ssoum",
+      "prenom": "Bitty",
+      "nom": "sow",
+      "mail": "bittysow@example.com",
       "age": 24,
       "id": "Y_7T8A1YsPg"
     },
@@ -62,6 +62,20 @@
       "mail": "adjimadadiop2@gmail.com",
       "age": 22,
       "id": "i7dpCSfE4Ro"
+    },
+    {
+      "prenom": "faly",
+      "nom": "fall",
+      "mail": "fatou@gmail.com",
+      "age": 22,
+      "id": "08z4JMsupLo"
+    },
+    {
+      "prenom": "diop",
+      "nom": "ramata",
+      "mail": "ramata@gmail.com",
+      "age": 45,
+      "id": "YDl2fnCW56A"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
