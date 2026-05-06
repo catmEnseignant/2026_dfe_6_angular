@@ -54,7 +54,7 @@ getInfoPatient(){
  }
  getEditPatients(data:any){
   console.log("test le methode :",data)
-  this.router.navigate(['from-Patient'])
+  this.router.navigate(['edit-patient',data.id]);
  }
 
 

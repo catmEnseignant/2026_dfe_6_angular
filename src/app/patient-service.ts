@@ -20,6 +20,11 @@ host ="http://localhost:3000"
   
   }
 
+  FinPatient(id:any){
+    return this.http.get(this.host+"/patients/"+id,);
+
+  }
+
   
   
 }
