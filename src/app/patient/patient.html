@@ -1,41 +1,44 @@
  <button class="btn-outline" (click)="getInfoPatient()">Ajouter un patient</button>
 <div class="card">
-    <div>
-
-    </div> 
-    <div class="card-body">
-
-        <h5 class="card-title">{{ title }} <form class="form-inline my-2 my-lg-0"><br>
-          <div class="form-inline my-2 my-lg-0">
-            <input class="form" type="search" [placeholder]="title" aria-label="Search">
-
-          </div>
-        </form></h5>
-      
-        <hr>
-        <!-- <a href="#" class="btn btn-primary">Ajouter un patient</a>
-        <a href="#" class="btn btn-secondary">Voir les patients</a> -->
-    </div> 
-  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Prenom</th>
-      <th scope="col">Nom</th> 
-      <th scope="col">Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    @for(item of tableauPatients2; track $index){
-      <tr>
-        <th scope="row">{{$index + 1}}</th>
-        <td>{{item.prenom}}</td>
-        <td>{{item.nom}}</td>
-        <td>{{item.email}}</td>
-      </tr>
-    }
-   
-    
-  </tbody>
-</table>   
+  <div class="card-header">
+    <div class="row">
+      <div class="col-5"></div>
+      @if(title == 'Patients'){
+        <h5>{{title}}</h5>
+      }
+     
+      <div class="col-7">
+        <input class="form-control me-2" type="search" placeholder= "title" aria-label="Search"/>
+      </div>
+      <div class="col-4">
+        
+        <button class="btn btn-primary" (click)="getInfoPatient()">Ajouter un patient</button>
+        
+      </div>
+    </div>
+  </div>
+  <div class="card-body"></div>
+    <table class="table">
+        <thead>
+           <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+             <th scope="col">Prenom</th>
+            <th scope="col">Email</th>
+            <th scope="col">Âge</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          @for(item of tableauPatients2 ; track $index){
+            <tr>
+              <th scope="col">{{$index+1}}</th>
+              <td>{{item.prenom}}</td>
+              <td>{{item.nom}}</td>
+              <td>{{item.mail}}</td>
+              <td>{{item.age}}</td>
+            </tr>
+          }
+        </tbody>
+</table>
 </div>

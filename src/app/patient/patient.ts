@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PatientService } from '../patient-service';
 
 
 @Component({
@@ -16,19 +17,26 @@ export class Patient implements OnInit
 
 tableauPatients2 :any = [];
  
-  constructor(private router: Router,private http:HttpClient) {
-    
+  constructor(
+    private router: Router,
+    private http:HttpClient,
+    private service:PatientService
+  ) {
+
   }
 
+  
+// ngOnItit sa excecute automatiment
   ngOnInit(): void {
     console.log ("tester la methode");
-    this.getPatients().subscribe(res => {
-      console.log (res);
-      this.tableauPatients2 = res;
-      console.log(this.tableauPatients2);
-    },error=>{
-      console.log("erreur lors de la recuperation des patients");
-      console.log(error);
+    this.service.getPatients().subscribe({
+      next: (res) => {
+        console.log('Données reçues:', res);
+        this.tableauPatients2 = res;
+      },
+      error: (err) => {
+        console.error('Erreur lors de la récupération des patients:', err);
+      }
     });
   }
 
@@ -44,9 +52,7 @@ getInfoPatient(){
 
 }
 
- getPatients(){
-   return this.http.get("http://localhost:3000/patients");
-   
- }
+ 
+
 
 }
