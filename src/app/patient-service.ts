@@ -8,7 +8,7 @@ export class PatientService {
   private http = inject(HttpClient);
 
   //URL centralisée qui contient l'attribut(host) de la classe on 
-  private host = "http://localhost:3000";
+  host = "http://localhost:3000";
 
   getPatients() {
     return this.http.get<any[]>(this.host + "/patients");
@@ -26,6 +26,12 @@ export class PatientService {
 
 
   }
+
+  UpdatePatient(){
+    console.log('text')
+
+  }
+  
 
 
 

@@ -46,6 +46,15 @@ export class FormPatient implements OnInit {
 
     this.service.FinPatient(id).subscribe(
       res=>{this.patient= res
+
+        this.formPatient.patchValue({
+          prenom: this.patient.prenom,
+          nom: this.patient.nom,
+          email: this.patient.email,
+          age: this.patient.age
+          
+
+        })
         console.log(this.patient)
 
       },
@@ -68,16 +77,19 @@ export class FormPatient implements OnInit {
   
 
   inputFormPatient() {
-    console.log("test");
-    console.log(this.formPatient.value);
+    if (this.isedit){
+      console.log('edit')
+      this.service.UpdatePatient
 
-    let data = this.formPatient.value;
-    //gestion de dependance du fichier patientservice
-    this.service.StorePatient(data).subscribe( ()=>{
-      console.log("patient ajouter avec success")
-      this.router.navigate(['/patient'])
-    });
-       
-      
+    } else{
+      console.log(this.formPatient.value);
+      let data = this.formPatient.value;
+      //gestion de dependance du fichier patientservice
+      this.service.StorePatient(data).subscribe( ()=>{
+        console.log("patient ajouter avec success")
+        this.router.navigate(['/patient'])
+      });
+
+    }   
   }
 }

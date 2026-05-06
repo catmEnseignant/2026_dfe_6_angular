@@ -4,31 +4,36 @@
       "id": "1",
       "nom": "Gadiaga",
       "prenom": "Khady",
-      "email": "khady.gadiaga@mainModule.com"
+      "email": "khady.gadiaga@gmail.com",
+      "age": 25
     },
     {
       "id": "2",
       "nom": "Diallo",
       "prenom": "Mamadou",
-      "email": "mamadou.diallo@mainModule.com"
+      "email": "mamadou.diallo@gmail.com",
+      "age": 30
     },
     {
       "id": "3",
       "nom": "Sarr",
       "prenom": "Awa",
-      "email": "awa.sarr@mainModule.com"
+      "email": "awa.sarr@gmail.com",
+      "age": 40
     },
     {
       "id": "4",
       "nom": "Diop",
       "prenom": "Ousmane",
-      "email": "ousmane.diop@mainModule.com"
+      "email": "ousmane.diop@gmail.com",
+      "age": 22
     },
     {
       "id": "5",
       "nom": "Fall",
       "prenom": "Fatou",
-      "email": "fatou.fall@mainModule.com"
+      "email": "fatou.fall@gmail.com",
+      "age": 26
     },
     {
       "prenom": "Modou Moustapha",
@@ -73,11 +78,18 @@
       "id": "O4e8aA_7opY"
     },
     {
-      "prenom": "",
-      "nom": "",
-      "email": "lydiaa@gmail.com",
-      "age": "",
-      "id": "wcXhaT1Pl0s"
+      "prenom": "Khady",
+      "nom": "Gadiaga",
+      "email": "khady.gadiaga@10gmail.com",
+      "age": 20,
+      "id": "5ex8VqKEb-Y"
+    },
+    {
+      "prenom": "Mouna",
+      "nom": "Ba",
+      "email": "mou@gmail.com",
+      "age": 50,
+      "id": "IMpSPQZkBIU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
