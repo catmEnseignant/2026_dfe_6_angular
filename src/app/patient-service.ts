@@ -20,6 +20,17 @@ host ="http://localhost:3000"
   
   }
 
+  FinPatient(id:any){
+    return this.http.get(this.host+"/patients/"+id,);
+
+  }
+  updatePatient(id:any,data:any){
+    console.log('texter la methode edit',data);
+    return this.http.put(this.host+"/patient/"+id,data);
+
+
+  }
+
   
   
 }

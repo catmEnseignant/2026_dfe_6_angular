@@ -30,6 +30,7 @@ tableauPatients2 :any = [];
       next: (res) => {
         console.log('Données reçues:', res);
         this.tableauPatients2 = res;
+        console.log()
       },
       error: (err) => {
         console.error('Erreur lors de la récupération des patients:', err);
@@ -54,7 +55,7 @@ getInfoPatient(){
  }
  getEditPatients(data:any){
   console.log("test le methode :",data)
-  this.router.navigate(['from-Patient'])
+  this.router.navigate(['edit-patient',data.id]);
  }
 
 
