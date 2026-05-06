@@ -4,8 +4,12 @@ import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PatientService } from '../patient-service';
+<<<<<<< HEAD
 import { error } from 'console';
 
+=======
+import { error } from 'node:console';
+>>>>>>> 87f88d960374dcef920b7c9ff5deb7c19544f9d8
 @Component({
   selector: 'app-from-patient',
   standalone: true,   
@@ -16,10 +20,19 @@ import { error } from 'console';
 export class FormPatient {
   isedit = false
 
+<<<<<<< HEAD
   idPatient :any;
   private activateRoute = inject(ActivatedRoute)
 
  patient:any
+=======
+  idPatient = null
+  private activateRoute = inject(ActivatedRoute)
+
+ patient:any
+
+
+>>>>>>> 87f88d960374dcef920b7c9ff5deb7c19544f9d8
   formPatient=new FormGroup({
     prenom : new FormControl(''),
     nom : new FormControl(''),
@@ -35,11 +48,32 @@ export class FormPatient {
     const id=this.activateRoute.snapshot.paramMap.get('id');
     console.log(id)
     if(id){
+<<<<<<< HEAD
       this.idPatient=id
       this.isedit = true;
       this.service.FinPatient(id).subscribe(
         res => {
           this.patient= res;
+=======
+      this.isedit = true
+      this.service.FinPatient(id).subscribe(
+        res => {
+          this.patient= res
+          console.log(this.patient)
+
+        },
+        error =>{
+          console.log(error)
+        }
+      );
+    }
+    else {
+      this.isedit = false
+    }
+
+   }
+
+>>>>>>> 87f88d960374dcef920b7c9ff5deb7c19544f9d8
 
           this.formPatient.patchValue({
             prenom : this.patient.prenom,

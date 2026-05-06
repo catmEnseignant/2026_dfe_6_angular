@@ -24,12 +24,15 @@ host ="http://localhost:3000"
     return this.http.get(this.host+"/patients/"+id,);
 
   }
+<<<<<<< HEAD
   updatePatient(id:any,data:any){
     console.log('texter la methode edit',data);
     return this.http.put(this.host+"/patient/"+id,data);
 
 
   }
+=======
+>>>>>>> 87f88d960374dcef920b7c9ff5deb7c19544f9d8
 
   
   
