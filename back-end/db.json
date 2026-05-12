@@ -1,25 +1,11 @@
 {
   "patients": [
     {
-      "id": "1",
-      "nom": "Gadiaga",
-      "prenom": "Khady",
-      "email": "khady.gadiaga@gmail.com",
-      "age": 25
-    },
-    {
       "id": "2",
       "nom": "Diallo",
       "prenom": "Mamadou",
       "email": "mamadou.diallo@gmail.com",
       "age": 30
-    },
-    {
-      "id": "3",
-      "nom": "Sarr",
-      "prenom": "Awa",
-      "email": "awa.sarr@gmail.com",
-      "age": 40
     },
     {
       "id": "4",
@@ -55,41 +41,31 @@
       "email": "nfatou@gmail.com",
       "age": 27,
       "id": "UHu4-gwJI74"
+    }
+  ],
+  "medecins": [
+    {
+      "id": "1",
+      "nom": "Diagne",
+      "prenom": "Aïssatou",
+      "specialite": "Gynécologue",
+      "telephone": "771234567",
+      "email": "aissatou.diagne@clinique.sn"
     },
     {
-      "prenom": "Soda",
-      "nom": "Gadiaga",
-      "email": "soda@gmail.com",
-      "age": 27,
-      "id": "7gDvOTXpMA4"
-    },
-    {
-      "prenom": "Abdou",
-      "nom": "Diouf",
-      "email": "abdou@gamil.com",
-      "age": 26,
-      "id": "4pjC70jFN2s"
-    },
-    {
-      "prenom": "Lydia",
-      "nom": "Ka",
-      "email": "lydia@gmail.com",
-      "age": 21,
-      "id": "O4e8aA_7opY"
+      "id": "2",
+      "nom": "Ndiaye",
+      "prenom": "Mamadou",
+      "specialite": "Pédiatre",
+      "telephone": "778765432",
+      "email": "mamadou.ndiaye@hopital.sn"
     },
     {
       "prenom": "Khady",
-      "nom": "Gadiaga",
-      "email": "khady.gadiaga@10gmail.com",
-      "age": 20,
-      "id": "5ex8VqKEb-Y"
-    },
-    {
-      "prenom": "Mouna",
-      "nom": "Ba",
-      "email": "mou@gmail.com",
-      "age": 50,
-      "id": "IMpSPQZkBIU"
+      "nom": "Ndiaye",
+      "email": "ndkhady@gmail.com",
+      "specialite": "Dentiste",
+      "id": "YDO8nZFT678"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

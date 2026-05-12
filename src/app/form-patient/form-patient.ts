@@ -18,7 +18,7 @@ export class FormPatient implements OnInit {
 
   isedit=false
 
-  idPatient = null
+  idPatient:any
 
   private activatedRoute= inject(ActivatedRoute)
 
@@ -40,6 +40,8 @@ export class FormPatient implements OnInit {
   ngOnInit(): void{
    const id= this.activatedRoute.snapshot.paramMap.get('id');
    console.log(id)
+
+   this.idPatient=id
 
    if(id){
     this.isedit = true
@@ -77,9 +79,20 @@ export class FormPatient implements OnInit {
   
 
   inputFormPatient() {
+
     if (this.isedit){
       console.log('edit')
-      this.service.UpdatePatient
+      this.service.UpdatePatient( this.idPatient, this.formPatient.value).subscribe(
+        res=>{
+          console.log('Patient modifié avec success', res)
+          this.router.navigate(['/patient'])
+        },
+        error=>{
+          console.log('erreur modification', error)
+        }
+      
+      );
+      
 
     } else{
       console.log(this.formPatient.value);
@@ -89,7 +102,8 @@ export class FormPatient implements OnInit {
         console.log("patient ajouter avec success")
         this.router.navigate(['/patient'])
       });
-
-    }   
+    }
+    
+    
   }
 }

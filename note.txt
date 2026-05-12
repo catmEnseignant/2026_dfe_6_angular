@@ -241,6 +241,7 @@ methodes onginit
 un observable subscribe a deux parametres qui son des fonctions
 pour les formulaire 
 consepte de base de la programmation
-// gestion de dependance
+
+ng g c medecin
  
 

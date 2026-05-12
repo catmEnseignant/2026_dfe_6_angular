@@ -27,15 +27,16 @@ export class PatientService {
 
   }
 
-  UpdatePatient(){
-    console.log('text')
+  UpdatePatient(id:any, data:any){
+    console.log('texter la methode edit', data);
+    return this.http.put(this.host + "/patients/" + id , data);
+
+  }
+
+  DeletePatient(id:any){
+    console.log(id ,'texte')
+    return this.http.delete(this.host + "/patients/" + id);
 
   }
   
-
-
-
-  
-
-
 }

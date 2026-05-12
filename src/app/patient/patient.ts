@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PatientService } from '../patient-service';
+import { error } from 'node:console';
 
 @Component({
   standalone: true,
@@ -16,23 +17,15 @@ export class Patient implements OnInit {
 
   // ✅ tableau réel pour @for
  tableauPatients2: any[] = [];
-
   constructor(
     private router: Router,
-
     private patientService: PatientService ) {
 
-
-
-
   }
-
-
   // ✅ Angular reconnaît cette méthode
   ngOnInit(): void {
     this.loadPatients();
-    
-    
+     
   }
 
   // ✅ chargement asynchrone correct
@@ -64,8 +57,29 @@ export class Patient implements OnInit {
     this.router.navigate(['form-patient']);
   }
 
- editPatient(data: any): void {
+  editPatient(data: any): void {
     console.log("tester la methode :", data);//afficher les information du patient dans le console
     this.router.navigate(['edit-patient', data.id]);
   }
+  
+ patients: any[] = [];
+
+deletePatient(id: any) {
+  this.patientService.DeletePatient(id).subscribe(
+    res => {
+      console.log('Suppression réussie', res);
+
+      this.patients = this.patients.filter(
+        patient => patient.id !== id
+      );
+    },
+    error => {
+      console.log("Erreur lors de la suppression");
+      console.log(error);
+    }
+  );
+}
+
+
+
 }
