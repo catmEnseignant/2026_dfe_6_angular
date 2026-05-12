@@ -1,0 +1,83 @@
+<form [formGroup]="formMedecin" (ngSubmit)="inputFormMedecin()">
+  <div class="row">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="inputPrenom">Prénom</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="inputPrenom" 
+          formControlName="prenom" 
+          placeholder="Prénom"
+          [class.is-invalid]="prenomError">
+        <div class="invalid-feedback" *ngIf="prenomError">
+          {{ prenomError }}
+        </div>
+      </div>
+      
+      <div class="form-group col-md-6">
+        <label for="inputNom">Nom</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="inputNom" 
+          formControlName="nom" 
+          placeholder="Nom"
+          [class.is-invalid]="nomError">
+        <div class="invalid-feedback" *ngIf="nomError">
+          {{ nomError }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail">Email</label>
+      <input 
+        type="email" 
+        class="form-control" 
+        id="inputEmail" 
+        formControlName="email" 
+        placeholder="Email"
+        [class.is-invalid]="emailError">
+      <div class="invalid-feedback" *ngIf="emailError">
+        {{ emailError }}
+      </div>
+    </div>
+    
+    <div class="form-group col-md-6">
+      <label for="inputSpecialite">Spécialité</label>
+      <select 
+        class="form-control" 
+        id="inputSpecialite" 
+        formControlName="specialite"
+        [class.is-invalid]="specialiteError">
+        <option value="">Sélectionner une spécialité</option>
+        <option value="Cardiologie">Cardiologie</option>
+        <option value="Dermatologie">Dermatologie</option>
+        <option value="Pédiatrie">Pédiatrie</option>
+        <option value="Neurologie">Neurologie</option>
+        <option value="Gynécologie">Gynécologie</option>
+        <option value="Ophtalmologie">Ophtalmologie</option>
+        <option value="Orthopédie">Orthopédie</option>
+        <option value="Psychiatrie">Psychiatrie</option>
+      </select>
+      <div class="invalid-feedback" *ngIf="specialiteError">
+        {{ specialiteError }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" [disabled]="formMedecin.invalid">
+        {{ isEdit ? 'Modifier le médecin' : 'Ajouter le médecin' }}
+      </button>
+      
+      <button type="button" class="btn btn-secondary ms-2" (click)="router.navigate(['/medecin'])">
+        Annuler
+      </button>
+    </div>
+  </div>
+</form>

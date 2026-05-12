@@ -1,76 +1,56 @@
 {
   "patients": [
     {
-      "prenom": "paya",
-      "nom": "niang",
-      "email": "p.niang04@gmail,com",
-      "age": 34,
-      "id": "c037"
+      "prenom": "mami",
+      "nom": "erfg",
+      "email": "mama@gmail.com",
+      "age": "22",
+      "id": "966a"
     },
     {
-      "prenom": "modou",
-      "nom": "sarr",
-      "email": "sarr.f@gmail.com",
-      "age": 34,
-      "id": "9b00"
+      "prenom": "haby",
+      "nom": "diaw",
+      "email": "diaw123@gmail.com",
+      "age": "11",
+      "id": "bf39"
     },
     {
-      "prenom": "bamba",
-      "nom": "niang",
-      "email": "p.niang04@getMaxListeners    .com",
-      "age": 34,
-      "id": "38d5"
-    },
-    {
-      "prenom": "fatou",
-      "nom": "sarr",
-      "email": "f.s@gmail.com",
-      "age": 30,
-      "id": "4c89"
-    },
-    {
-      "prenom": "khady",
-      "nom": "mbaye",
-      "email": "p.niang04@getMaxListeners    .com",
-      "age": 34,
-      "id": "690e"
-    },
-    {
-      "prenom": "bineta",
-      "nom": "sarr",
-      "email": "hh@kldkj.com",
-      "age": 34,
-      "id": "db2d"
-    },
-    {
-      "id": "b706",
-      "prenom": "coumba",
-      "nom": "cissokho",
-      "email": "c.cissokho6@isepat.edu.sn",
-      "age": "50"
-    },
-    {
-      "id": "58d3",
-      "prenom": "coumba",
-      "nom": "cissokho",
-      "email": "c.cissokho6@isepat.edu.sn",
-      "age": "50"
-    },
-    {
-      "id": "9a1d",
-      "prenom": "Haby",
-      "nom": "Niang",
-      "email": "haby2gmail.com",
+      "id": "5a9f",
+      "prenom": "Moustapha",
+      "nom": "Diouf",
+      "email": "tapha@yawo.com",
       "age": "34"
     }
   ],
-  "Parents": {
-    "pere": {
-      "prenom": "mamadou",
-      "nom": "niang",
-      "email": "m.niang04@gmail,com",
-      "age": 34
+  "medecins": [
+    {
+      "id": "1",
+      "prenom": "Philippe",
+      "nom": "Lefebvre",
+      "email": "philippe.lefebvre@hopital.fr",
+      "specialite": "Cardiologie"
+    },
+    {
+      "id": "7f4e",
+      "prenom": "coumba",
+      "nom": "cissokho",
+      "email": "c.cissokho6@isepat.edu.sn",
+      "specialite": "Dermatologie"
+    },
+    {
+      "id": "8b41",
+      "prenom": "Moustapha",
+      "nom": "Diouf",
+      "email": "tapha@yawo.com",
+      "specialite": "Neurologie"
+    },
+    {
+      "id": "4878",
+      "prenom": "Dr",
+      "nom": "Ndiaye",
+      "email": "ndiaye@gmail.com",
+      "specialite": "Orthopédie"
     }
-  },
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
