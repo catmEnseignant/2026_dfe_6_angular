@@ -10,7 +10,7 @@ import { PatientService } from '../patient-service';
   styleUrl: './patient.css',
 })
 
-export class Patient implements OnInit{  
+export class Patient implements OnInit {  
   
   patients2:any=[]
   title='patients';
@@ -24,8 +24,8 @@ export class Patient implements OnInit{
   email='dieynabaf@gmail.com';
   constructor(
     private router:Router,
-    private http:HttpClient,
-    private service:PatientService){
+    private service:PatientService
+  ){
 
   }
   
@@ -50,7 +50,25 @@ export class Patient implements OnInit{
     this.router.navigate(['direction'])
   }
   
+  editPatient(data:any){
+    console.log("tester la methode",data.id);
+    this.router.navigate(['edit-patient',data.id])
+  }
   
+
+   deletePatient(id:any){
+    console.log("delete patient")
+    this.service.deletePatients(id).subscribe(
+      res=>{
+        this.router.navigate(["/patient"])
+        console.log(res)
+      }
+
+    );
     
+  }
+    
+  
+
 
 }

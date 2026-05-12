@@ -1,12 +1,6 @@
 {
   "patients": [
     {
-      "id": "1",
-      "prenom": "Dieyna",
-      "nom": "Faye",
-      "email": "dieynabaf741@gmail.com"
-    },
-    {
       "id": "2",
       "prenom": "Binetou",
       "nom": "Dieye",
@@ -45,6 +39,71 @@
       "nom": "palaye",
       "email": "palaye@gmail.com",
       "age": 7
+    },
+    {
+      "id": "d31f",
+      "prenom": "ddddd",
+      "nom": "aaddd",
+      "email": "snmmm",
+      "age": 34
+    },
+    {
+      "id": "7ff0",
+      "prenom": "",
+      "nom": "",
+      "email": "",
+      "age": ""
+    },
+    {
+      "id": "ccfe",
+      "prenom": "",
+      "nom": "",
+      "email": "",
+      "age": ""
+    },
+    {
+      "id": "64f6",
+      "prenom": "",
+      "nom": "",
+      "email": "",
+      "age": ""
+    },
+    {
+      "id": "1639",
+      "prenom": "samba",
+      "nom": "palaye",
+      "email": "palaye@gmail.com",
+      "age": 7
+    }
+  ],
+  "medecins": [
+    {
+      "id": "1",
+      "prenom": "Ndeye Fatou",
+      "nom": "Faye",
+      "email": "ndeyefatou@gmail.com",
+      "specialite": "cardiologie"
+    },
+    {
+      "id": "2",
+      "prenom": "Astou",
+      "nom": "Faye",
+      "email": "astou@gmail.com",
+      "specialite": "gynecologie"
+    },
+    {
+      "id": "2",
+      "prenom": "Mamadou Billy",
+      "nom": "Faye",
+      "email": "billydio@gmail.com",
+      "specialite": "ophtalomologie"
+    },
+    {
+      "id": "55f4",
+      "prenom": "Dieynaba",
+      "nom": "FAYE",
+      "email": "dieynabaf741@gmail.com",
+      "specialite": ""
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

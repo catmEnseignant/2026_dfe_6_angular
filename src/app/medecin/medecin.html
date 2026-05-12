@@ -1,17 +1,14 @@
+<p>medecin works!</p>
 
 <div class="card">
     <div class="card-header">
         <div class="row">
             <div class="col-5">
-                @if (title =='patients') {
-                    <h3>{{title}}</h3>
-                }@else {
-                    <h3>Titre introuvable</h3>
-                }
+                
             </div>
             <div class="col-6">
-                <input class="form-control mr-sm-2" type="search" [placeholder]="getEmail()" aria-label="Search">
-                <button (click)=" getInfoPatient()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Ajouter un Patient</button>
+                <input class="form-control mr-sm-2" type="search" [placeholder]="" aria-label="Search">
+                <button (click)="ajoutmedecin()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Ajouter un medecin</button>
 
             </div>
             
@@ -27,24 +24,24 @@
                     <th scope="col">Prenom</th>
                     <th scope="col">Nom</th>
                     <th scope="col">Email</th>
-                    <th scope="col">age</th>
+                    <th scope="col">Specialite</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @for (item of patients2 ;track $index){
+                @for (item of medecin ;track $index){
                     <tr>
                         <th scope="row">{{$index+1}}</th>
                         <td>{{item.prenom}}</td>
                         <td>{{item.nom}}</td>
                         <td>{{item.email}}</td>
-                        <td>{{item.age}}</td>
+                        <td>{{item.specialite}}</td>
                         <td>
-                            <button (click)="editPatient(item)">
+                            <button (click)="modifieMedecin(item.id)">
                                 <i class="bi bi-pencil-square"></i>
                                 modifier
                             </button>
-                            <button (click)="deletePatient(item.id)">
+                            <button (click)="deleteMedecin(item.id)">
                                 <i class="bi bi-info-circle"></i>
                                 supprimer
                             </button>
