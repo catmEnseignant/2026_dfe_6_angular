@@ -9,15 +9,22 @@ import { Router } from '@angular/router';
   styleUrl: './sidebar.css',
 })
 export class Sidebar {
-constructor( private router: Router) {
+  constructor(private router: Router) {}
 
+  goToFormPatient() {
+    this.router.navigate(['/insert-patient']);
+  }
+
+  goToPatientList() {
+    this.router.navigate(['/patient']);
+  }
+
+  goToMedecinList() {
+    this.router.navigate(['/medecin']);
+  }
+
+  goToFormMedecin() {
+    this.router.navigate(['/insert-medecin']);
+  }
 }
-goToFormPatient() {
-  console.log("je suis dans goToFormPatient");
-  this.router.navigate(['/form-patient']);
-}
-goToPatientList() {
-  console.log("je suis dans goToPatientList");
-  this.router.navigate(['/patient']);
-}
-}
+

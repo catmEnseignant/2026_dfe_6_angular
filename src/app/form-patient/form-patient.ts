@@ -1,46 +1,100 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Component, inject, OnInit } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Patient, PatientService } from '../patient-service';
 
 @Component({
+  standalone: true,
   selector: 'app-form-patient',
-  imports: [ CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './form-patient.html',
   styleUrl: './form-patient.css',
 })
-export class FormPatient {
-  formPatient =new FormGroup({
-    prenom : new FormControl(''),
-    nom : new FormControl(''),
-    email : new FormControl(''),
-    dateNaissance : new FormControl('')
+export class FormPatient implements OnInit {
+  formPatient = new FormGroup({
+    prenom: new FormControl('', Validators.required),
+    nom: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    dateNaissance: new FormControl(''),
   });
 
-private http = inject(HttpClient);
-private router = inject(Router);
+  loading = false;
+  editMode = false;
+  patientId: number | null = null;
 
+  private patientService = inject(PatientService);
+  private router = inject(Router);
+  private activatedRoute = inject(ActivatedRoute);
 
-inputFormPatient(){
-  console.log("Formulaire soumis");
-  console.log(this.formPatient.value);
-  let data = this.formPatient.value;
-  this.http.post('http://localhost:3000/patients', data).subscribe(res=>{
-    console.log("Patient ajouté avec succès");
-    console.log(res);
-    this.router.navigate(['/patients']);
-  }, error => {
-    console.log("erreur lors de l'ajout de patient");
-    console.log(error);
-    
-    
-  });
-}
+  ngOnInit(): void {
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    if (id) {
+      this.editMode = true;
+      this.patientId = Number(id);
+      this.loadPatient(this.patientId);
+    }
+  }
 
+  private loadPatient(id: number): void {
+    this.loading = true;
+    this.patientService.getPatient(id).subscribe({
+      next: (patient) => {
+        this.formPatient.patchValue(patient);
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error('Erreur lors du chargement du patient :', err);
+        this.loading = false;
+      },
+    });
+  }
 
+  submitForm(): void {
+    if (this.formPatient.invalid) {
+      this.formPatient.markAllAsTouched();
+      return;
+    }
 
+    const patientData = this.formPatient.value as Patient;
+    this.loading = true;
 
+    if (this.editMode && this.patientId !== null) {
+      this.patientService.updatePatient(this.patientId, patientData).subscribe({
+        next: () => {
+          this.loading = false;
+          this.router.navigate(['/patient']);
+        },
+        error: (err) => {
+          console.error('Erreur lors de la mise à jour du patient :', err);
+          this.loading = false;
+          alert('Impossible de mettre à jour le patient');
+        },
+      });
+    } else {
+      this.patientService.createPatient(patientData).subscribe({
+        next: () => {
+          this.loading = false;
+          this.router.navigate(['/patient']);
+        },
+        error: (err) => {
+          console.error('Erreur lors de l’ajout du patient :', err);
+          this.loading = false;
+          alert('Impossible d’ajouter le patient');
+        },
+      });
+    }
+  }
 
+  cancel(): void {
+    this.router.navigate(['/patient']);
+  }
 
+  get formTitle(): string {
+    return this.editMode ? 'Modifier le patient' : 'Ajouter un patient';
+  }
+
+  get submitLabel(): string {
+    return this.editMode ? 'Mettre à jour' : 'Enregistrer';
+  }
 }

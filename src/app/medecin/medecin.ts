@@ -1,0 +1,53 @@
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { MedecinService } from '../medecin-service';
+
+@Component({
+  standalone: true,
+  selector: 'app-medecin',
+  imports: [CommonModule],
+  templateUrl: './medecin.html',
+  styleUrl: './medecin.css',
+})
+export class Medecin implements OnInit {
+  medecins$!: Observable<any[]>;
+
+  private router = inject(Router);
+  private medecinService = inject(MedecinService);
+
+  ngOnInit(): void {
+    this.loadMedecins();
+  }
+
+  loadMedecins(): void {
+    this.medecins$ = this.medecinService.getMedecins();
+  }
+
+  insertMedecin(): void {
+    this.router.navigate(['/insert-medecin']);
+  }
+
+  editMedecin(medecin: any): void {
+    this.router.navigate(['/edit-medecin', medecin.id]);
+  }
+
+  deleteMedecin(medecin: any): void {
+    if (confirm('Êtes-vous sûr de vouloir supprimer ce médecin ?')) {
+      this.medecinService.deleteMedecin(medecin.id).subscribe({
+        next: () => {
+          this.loadMedecins();
+        },
+        error: (err) => {
+          console.error('Erreur lors de la suppression :', err);
+          alert('Erreur lors de la suppression du médecin');
+        },
+      });
+    }
+  }
+
+  trackById(index: number, medecin: any): number {
+    return medecin.id ?? index;
+  }
+}

@@ -1,44 +1,39 @@
 {
   "patients": [
     {
-      "id": "1",
       "prenom": "Fatou Bintou",
       "nom": "Diop",
-      "age": 30,
-      "genre": "Femme",
-      "email": "fatoubintou@gmail.com"
+      "email": "fatoubintou@gmail.com",
+      "dateNaissance": "2002-05-22",
+      "id": "1"
     },
     {
-      "id": "2",
       "prenom": "Ndeye khady",
       "nom": "Niang",
-      "age": 25,
-      "genre": "Femme",
-      "email": "ndeyekhady@gmail.com"
+      "email": "ndeyekhady@gmail.com",
+      "dateNaissance": "2026-05-26",
+      "id": "2"
     },
     {
-      "id": "4",
       "prenom": "Baye Marame",
       "nom": "Thiombane",
-      "age": 20,
-      "genre": "Homme",
-      "email": "bayemarame@gmail.com"
+      "email": "bayemarame@gmail.com",
+      "dateNaissance": "2000-05-31",
+      "id": "4"
     },
     {
-      "id": "5",
       "prenom": "Abdoulaye Samba",
       "nom": "Samba",
-      "age": 20,
-      "genre": "Homme",
-      "email": "abdsamba@gmail.com"
+      "email": "abdsamba@gmail.com",
+      "dateNaissance": "2026-06-24",
+      "id": "5"
     },
     {
-      "id": "6",
       "prenom": "Mamadou Lamine",
       "nom": "Sagna",
-      "age": 40,
-      "genre": "Homme",
-      "email": "mamadoulamine@gmail.com"
+      "email": "mamadoulamine@gmail.com",
+      "dateNaissance": "2026-05-22",
+      "id": "6"
     },
     {
       "id": "0283",
@@ -46,6 +41,40 @@
       "nom": "Diop",
       "email": "fallou@gmail.com",
       "dateNaissance": "2026-04-17"
+    }
+  ],
+  "medecins": [
+    {
+      "id": "1",
+      "prenom": "Aminata",
+      "nom": "Dieng",
+      "specialite": "Pédiatrie",
+      "email": "aminata.dieng@gmail.com",
+      "telephone": "+221771234567"
+    },
+    {
+      "id": "2",
+      "prenom": "Ibrahima",
+      "nom": "Sow",
+      "specialite": "Cardiologie",
+      "email": "ibrahima.sow@gmail.com",
+      "telephone": "+221776543210"
+    },
+    {
+      "id": "3",
+      "nom": "Diop",
+      "prenom": "Fallou",
+      "email": "fallou@gmail.com",
+      "telephone": "+221771234567",
+      "specialite": "Chirurgien"
+    },
+    {
+      "prenom": "Boubacar",
+      "nom": "Dieye",
+      "email": "boubacar@gmail.com",
+      "telephone": "+221771234567",
+      "specialite": "Psychologue",
+      "id": "4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

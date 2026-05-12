@@ -1,72 +1,64 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { error } from 'node:console';
-
+import { PatientService } from '../patient-service';
 
 @Component({
+  standalone: true,
   selector: 'app-patient',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './patient.html',
   styleUrl: './patient.css',
 })
 export class Patient implements OnInit {
-  title = 'Patient';
-  prenom = "Omar Cheikh";
-  nombrePatients = 100;
-  nom = "Niang";
-  email = "ocn@gmail.com";
-  id = 3;
+  title = 'Patients';
+  patients: any[] = [];
+  loading = true;
 
+  private router = inject(Router);
+  private patientService = inject(PatientService);
 
-  constructor( private router: Router, private http:HttpClient) {
+  ngOnInit(): void {
+    this.loadPatients();
+  }
 
-}
-ngOnInit(): void {
-    console.log("tester la methode");
-    this.GetPatients().subscribe(res=> {
-      console.log(res);
-      this.tableauPatients2 = res;
-      
-    },error=>{
-        console.log(error);
-        console.log("Erreur lors de la recuperation des patients");
-        
+  loadPatients(): void {
+    this.loading = true;
+    this.patientService.getPatients().subscribe({
+      next: (patients) => {
+        this.patients = patients;
+        this.loading = false;
+      },
+      error: (err) => {
+        console.error('Erreur lors du chargement des patients :', err);
+        this.loading = false;
+      },
+    });
+  }
+
+  insertPatient(): void {
+    this.router.navigate(['/insert-patient']);
+  }
+
+  editPatient(patient: any): void {
+    this.router.navigate(['/edit-patient', patient.id]);
+  }
+
+  deletePatient(patient: any): void {
+    if (confirm('Êtes-vous sûr de vouloir supprimer ce patient ?')) {
+      this.patientService.deletePatient(patient.id).subscribe({
+        next: () => {
+          this.loadPatients();
+        },
+        error: (err) => {
+          console.error('Erreur lors de la suppression :', err);
+          alert('Erreur lors de la suppression du patient');
+        },
       });
-    
-}
-    tableauPatients2 :any = [];
-
-  GetSomme (a: number, b: number): number {
-    return a + b;
+    }
   }
 
-  GetEmail(): string {
-    return "oc.niang6@isepat.edu.sn";
+  trackById(index: number, patient: any): number {
+    return patient.id ?? index;
   }
-
-  GetPrenom(): string {
-    return "Baye Marame";
-  }
-
-  GetNom(): string {
-    return "Thiombane";
-  }
-
-  Getplaceholder(): string {
-    return "Ajouter un patient";
-  }
-
-
-  GetInfoPatient() {
-    this.router.navigate(['form-patient']);
-  }
-
-  GetPatients() {
-    return this.http.get('http://localhost:3000/patients');
-    
-
-  }
-
-
 }

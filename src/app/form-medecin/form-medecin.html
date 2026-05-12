@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-dark text-white">
+      <h4 class="mb-0">{{ formTitle }}</h4>
+    </div>
+
+    <div class="card-body">
+      <form [formGroup]="formMedecin" (ngSubmit)="submitForm()">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Nom</label>
+            <input type="text" class="form-control" placeholder="Entrez le nom" formControlName="nom" />
+            <div *ngIf="formMedecin.controls.nom.invalid && formMedecin.controls.nom.touched" class="text-danger small">
+              Le nom est requis.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Prénom</label>
+            <input type="text" class="form-control" placeholder="Entrez le prénom" formControlName="prenom" />
+            <div *ngIf="formMedecin.controls.prenom.invalid && formMedecin.controls.prenom.touched" class="text-danger small">
+              Le prénom est requis.
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Spécialité</label>
+            <input type="text" class="form-control" placeholder="Entrez la spécialité" formControlName="specialite" />
+            <div *ngIf="formMedecin.controls.specialite.invalid && formMedecin.controls.specialite.touched" class="text-danger small">
+              La spécialité est requise.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="exemple@mail.com" formControlName="email" />
+            <div *ngIf="formMedecin.controls.email.invalid && formMedecin.controls.email.touched" class="text-danger small">
+              Entrez une adresse email valide.
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label">Téléphone</label>
+            <input type="tel" class="form-control" placeholder="Entrez un numéro" formControlName="telephone" />
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-success me-2" [disabled]="loading">
+            {{ submitLabel }}
+          </button>
+          <button type="button" class="btn btn-outline-primary" (click)="cancel()" [disabled]="loading">
+            Retour à la liste des médecins
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,16 +1,16 @@
 <div class="container mt-4">
   <div class="card shadow">
     <div class="card-header bg-dark text-white">
-      <h4 class="mb-0">Formulaire Patient</h4>
+      <h4 class="mb-0">{{ formTitle }}</h4>
     </div>
 
     <div class="card-body">
-      <form [formGroup]="formPatient" (ngSubmit)="inputFormPatient()">
+      <form [formGroup]="formPatient" (ngSubmit)="submitForm()">
 
         <div class="row mb-3">
           <div class="col-md-6">
             <label class="form-label">Nom</label>
-            <input type="text" class="form-control" placeholder="Entrez le nom" formControlName="nom">
+            <input type="text" class="form-control" placeholder="Entrez le nom" formControlName="nom" />
           </div>
 
           <div class="col-md-6">
@@ -34,13 +34,13 @@
 
 
 
-        <!-- Boutons -->
         <div class="d-flex justify-content-end">
-
-          <button type="submit" class="btn btn-success" >
-            Enregistrer
+          <button type="submit" class="btn btn-success me-2" [disabled]="loading">
+            {{ submitLabel }}
           </button>
-          <a href="/patient" class="btn btn-outline-primary ms-2">Retour à la liste des patients</a>
+          <button type="button" class="btn btn-outline-primary" (click)="cancel()" [disabled]="loading">
+            Retour à la liste des patients
+          </button>
         </div>
 
       </form>
