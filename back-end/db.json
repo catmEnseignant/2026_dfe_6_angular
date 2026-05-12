@@ -1,20 +1,6 @@
 {
   "patients": [
     {
-      "id": "1",
-      "nom": "Ndiaye",
-      "prenom": "Fatou",
-      "mail": "john.doe@example.com",
-      "age": 20
-    },
-    {
-      "id": "2",
-      "nom": "Thiombane",
-      "prenom": "Baye",
-      "mail": "jane.smith@example.com",
-      "age": 34
-    },
-    {
       "id": "3",
       "nom": "Niang",
       "prenom": "Omar",
@@ -27,13 +13,6 @@
       "prenom": "Awa",
       "mail": "awa.sarr@example.com",
       "age": 28
-    },
-    {
-      "id": "5",
-      "nom": "Diop",
-      "prenom": "Mamadou",
-      "mail": "mamadou.diop@example.com",
-      "age": 30
     },
     {
       "id": "f3a4",
@@ -50,11 +29,41 @@
       "age": 50
     },
     {
-      "id": "0f68",
-      "prenom": "Coumba",
-      "nom": "Camara",
-      "mail": "camara@gmail.com",
-      "age": 50
+      "id": "be63",
+      "prenom": "Baye Marame",
+      "nom": "Thiombane",
+      "mail": "thiombane@gmail.com",
+      "age": 19
+    },
+    {
+      "id": "bed5",
+      "prenom": "Bamba",
+      "nom": "Ndiaye",
+      "mail": "Ndiaye@gmail.com",
+      "age": 30
+    },
+    {
+      "id": "dac5",
+      "prenom": "Mansour ",
+      "nom": "Samb",
+      "mail": "Mansour_samb@gmail.com",
+      "age": 21
+    }
+  ],
+  "medecins": [
+    {
+      "id": "m2",
+      "prenom": "Fatou",
+      "nom": "Sow",
+      "mail": "fatou.sow@example.com",
+      "specialite": "Pédiatrie"
+    },
+    {
+      "id": "5d92",
+      "prenom": "Abdoulaye ",
+      "nom": "Samba",
+      "mail": "samba@gmail.com",
+      "specialite": "Cardiologie"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

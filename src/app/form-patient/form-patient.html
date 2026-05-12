@@ -1,9 +1,9 @@
-<form [formGroup] = "formPatient" (ngSubmit)="inputForm()">
+<form [formGroup] = "formPatient" (ngSubmit)="inputForm()"> 
   <div class="form-container">
     <div class="form-row">
       <div class="form-group">
         <label for="prenom" class="form-label">Prénom</label>
-        <input type="text" class="form-control" id="prenom" placeholder="Abdoulaye" formControlName="prenom">
+        <input type="text" class="form-control" id="prenom" placeholder="Abdoulaye" formControlName="prenom" require>
       </div>
       <div class="form-group">
         <label for="nom" class="form-label">Nom</label>
@@ -12,8 +12,8 @@
     </div>
     
     <div class="form-group">
-      <label for="email" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="email" placeholder="exemple@gmail.com" formControlName="email">
+      <label for="email" class="form-label">Adresse Email</label>
+      <input type="email" class="form-control" id="email" placeholder="exemple@gmail.com" formControlName="mail">
     </div>
     
     <div class="form-group">

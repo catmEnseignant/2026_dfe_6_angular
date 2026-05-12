@@ -26,19 +26,25 @@
           <th scope="col">Prenom</th>
           <th scope="col">Nom</th>
           <th scope="col">Email</th>
+          <th>Age</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        @for (item of Patients2; track $index) {
+        @for (item of Patients2 | async ; track $index) {
           <tr>
             <th scope="row">{{ $index + 1 }}</th>
             <td>{{ item.prenom }}</td>
             <td>{{ item.nom }}</td>
             <td>{{ item.mail }}</td>
+            <td>{{ item.age }}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editPatient(item)">Modifier</button> |
+              <button class="btn btn-danger" (click)="deletePatient(item.id)">Supprimer</button>
+            </td>
           </tr>
         }
       </tbody>
     </table>
   </div>
 </div>
-
