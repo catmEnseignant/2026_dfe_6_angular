@@ -1,10 +1,10 @@
 <div class="card">
     <div class="card-header">
-        <h3>Ajouter un patient</h3>
+        <h3>Ajouter un medecin</h3>
     </div>
 
     <div class="card-body">
-        <form [formGroup]="formPatient" (ngSubmit)="inputFormPatient()">
+        <form [formGroup] = "formMedecin" (ngSubmit) = "inputFormMedecin()">
             <div class="row">
                 <div class="col-6 mb-3">
                     <label for="nom" class="form-label">Nom</label>
@@ -17,21 +17,22 @@
             </div>
 
             <div class="row">
-                <div class="col-6 mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" placeholder="Entrer votre email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-
+                
                 <!-- formControlName comme name en php -->
                 <div class="col-6 mb-3">
-                    <label for="exampleInputAge1" class="form-label">Age</label>
-                    <input type="number" placeholder="Entrer votre age" formControlName="age" class="form-control" id="exampleInputAge1">
+                    <label for="tel" class="form-label">Telephone</label>
+                    <input type="text" placeholder="Entrer votre numero de telephone" formControlName="telephone" class="form-control" id="tel">
+                </div>
+                <div class="col-6 mb-3">
+                    <label for="fonction" class="form-label">Fonction</label>
+                    <input type="text" placeholder="Entrer votre fonction" formControlName="fonction" class="form-control" id="fonction">
                 </div>
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            
+            <div class="col-12 mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" placeholder="Entrer votre email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <button type="submit" class="btn btn-primary pl-50">Enregistrer</button>
         </form>

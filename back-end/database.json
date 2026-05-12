@@ -1,11 +1,11 @@
 {
   "patients": [
     {
-      "id": "1",
+      "prenom": "Ndèye Awa",
       "nom": "Sy",
-      "prenom": "Awa",
-      "email": "awaSy@gmail.com",
-      "age": 50
+      "email": "ndeyeawaSy@gmail.com",
+      "age": 45,
+      "id": "1"
     },
     {
       "id": "2",
@@ -50,13 +50,6 @@
       "age": 20
     },
     {
-      "id": "d9ce",
-      "prenom": "Ousmane",
-      "nom": "Sy",
-      "email": "ousmaneSy@gmail.com",
-      "age": 24
-    },
-    {
       "id": "2f40",
       "prenom": "Aminata",
       "nom": "Diallo",
@@ -64,11 +57,69 @@
       "age": 100
     },
     {
-      "id": "cfbd",
+      "id": "9c1b",
+      "prenom": "Awa",
+      "nom": "Sy",
+      "email": "awaSy@gmail.com",
+      "age": 50
+    }
+  ],
+  "medecins": [
+    {
+      "id": "1",
+      "nom": "Senghor",
+      "prenom": "Leon",
+      "email": "senghor@gmail.com",
+      "telephone": "771234567",
+      "fonction": "Neurologue"
+    },
+    {
+      "prenom": "Abdallah",
+      "nom": "Sy",
+      "email": "abdallah@gmail.com",
+      "telephone": "771234567",
+      "fonction": "Cardiologue",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "nom": "Diop",
+      "prenom": "Ibrahima",
+      "email": "ibrahima@gmail.com",
+      "telephone": "771234567",
+      "fonction": "Chirurgien"
+    },
+    {
+      "id": "4",
+      "nom": "Dieye",
+      "prenom": "Boubacacr",
+      "email": "boubacar@gmail.com",
+      "telephone": "771234567",
+      "fonction": "Psychologue"
+    },
+    {
+      "id": "5",
+      "nom": "Diallo",
+      "prenom": "Ouleymatou",
+      "email": "ouleye@gmail.com",
+      "telephone": "771234567",
+      "fonction": "Pédiatre"
+    },
+    {
+      "id": "4729",
       "prenom": "Aminata",
       "nom": "Diallo",
       "email": "aminata@gmail.com",
-      "age": 100
+      "telephone": "703568387",
+      "fonction": "Psychiatre"
+    },
+    {
+      "id": "5ec1",
+      "prenom": "Abdoulaye",
+      "nom": "Samba",
+      "email": "abdoulaye@gmail.com",
+      "telephone": "774671872",
+      "fonction": "ORL"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

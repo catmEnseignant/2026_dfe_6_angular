@@ -1,18 +1,14 @@
 <div class="card">
     <div class="card-header">
         <div class="row">
-            <div class="col-5">
-                @if (title == 'Patients') {
-                    <h3 >{{ title }}</h3> 
-                } @else {
-                    <h3> Titre introuvable </h3>
-                }
+            <div class="col-4">
+                <h3> Médecins </h3>
             </div>
             <div class="col-5">
-                <input class="col-3 form-control me-2" type="search" [placeholder]= "title" aria-label="Search"/>
+                <input class="col-3 form-control me-2" placeholder="Medecins" type="search"  aria-label="Search"/>
             </div>
-            <div class="col-2">
-                <button (click)="getInfoPatient()" class="col btn btn-outline-success" type="submit">Ajouter un patient</button>
+            <div class="col-3">
+                <button (click)="insertMedecin()" class="col btn btn-outline-success" >Ajouter un medecin</button>
             </div>
         </div>
     </div>
@@ -25,25 +21,27 @@
                     <th scope="col">Prenom</th>
                     <th scope="col">Nom</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Age</th>
+                    <th scope="col">Telephone</th>
+                    <th scope="col">Fonction</th>
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
             
             <tbody>
-                @for(item of patients2 | async ;track $index) {
+                @for(item of medecins |async; track $index ){
                     <tr>
                         <th scope="row">{{ item.id }}</th>
                         <td>{{ item.prenom }}</td>
                         <td>{{ item.nom }}</td>
                         <td> {{ item.email }} </td>
-                        <td> {{ item.age }} </td>
+                        <td> {{ item.telephone }} </td>
+                        <td> {{ item.fonction }} </td>
                         <td class="d-flex gap-2">
-                            <button class="btn btn-success" (click)="editPatient(item)">
+                            <button class="btn btn-success" (click) = "editMedecin(item)">
                                 <i class="bi bi-pencil"></i>
                                 Edit
                             </button>
-                            <button class="btn btn-danger" (click)="deletePatient(item.id)">
+                            <button class="btn btn-danger" (click) = "deleteMedecin(item.id)">
                                 <i class="bi bi-trash3"></i>
                                 Delete
                             </button>
