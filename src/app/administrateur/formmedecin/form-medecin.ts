@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
-import { Medecinservice } from '../medecinservice';
+import { Medecinservice } from '../../medecinservice';
 import { CommonModule } from '@angular/common';
 import { FormGroup,FormControl, ReactiveFormsModule } from '@angular/forms';
 

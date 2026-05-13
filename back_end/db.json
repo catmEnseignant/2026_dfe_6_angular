@@ -78,32 +78,11 @@
   ],
   "medecins": [
     {
-      "id": "1",
-      "prenom": "Ndeye Fatou",
-      "nom": "Faye",
-      "email": "ndeyefatou@gmail.com",
-      "specialite": "cardiologie"
-    },
-    {
-      "id": "2",
-      "prenom": "Astou",
-      "nom": "Faye",
-      "email": "astou@gmail.com",
-      "specialite": "gynecologie"
-    },
-    {
-      "id": "2",
-      "prenom": "Mamadou Billy",
-      "nom": "Faye",
-      "email": "billydio@gmail.com",
-      "specialite": "ophtalomologie"
-    },
-    {
-      "id": "55f4",
+      "id": "b7c8",
       "prenom": "Dieynaba",
       "nom": "FAYE",
       "email": "dieynabaf741@gmail.com",
-      "specialite": ""
+      "specialite": "cardiologie"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

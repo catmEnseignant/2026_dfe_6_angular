@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PatientService } from '../patient-service';
+import { PatientService } from '../../patient-service';
 import { error } from 'node:console';
 
 @Component({
@@ -59,7 +59,7 @@ export class FormPatient implements OnInit {
     if(this.isedit){
       this.service.updatePatient(this.idpatient,this.formPatient.value).subscribe(res=>{
         console.log(res)
-        this.route.navigate(['/patient'])
+        this.route.navigate(['/administration/patient'])
       },error=>{
         console.log(error)
       })
@@ -70,7 +70,7 @@ export class FormPatient implements OnInit {
       let data =this.formPatient.value
       this.service.storepatients(data).subscribe(res=>{
         console.log("patient ajouter avec sucsce")
-        this.route.navigate(['/patient'])
+        this.route.navigate(['/administration/patient'])
     
       }, error=>{
 

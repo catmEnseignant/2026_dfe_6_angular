@@ -1,18 +1,9 @@
 import { Routes } from '@angular/router';
-import { Patient } from './patient/patient';
-import { FormPatient } from './formpatient/form-patient';
-import { Medecin } from './medecin/medecin';
-import { FormMedecin } from './formmedecin/form-medecin';
+
 
 export const routes: Routes = [
-    {path:'',redirectTo:'patient',pathMatch:'full'},
-    {path:'patient',component:Patient},
-    {path:'medecin',component:Medecin},
-    {path:'direction',component:FormPatient},
-    {path:'form-patient',component:FormPatient},
-    {path:'edit-patient/:id',component:FormPatient},
-    {path:'delete-patient/:id',component:Patient},
-    {path:'form-medecin',component:FormMedecin},
-    {path:'edit-medecin/:id',component:FormMedecin},
-    {path:'delete-medecin/:id',component:Medecin}
+    
+    {path:'',loadChildren:()=> import('./public/public.routes').then(m=>m.publicRoutes)},
+    {path:'administration',loadChildren:() => import('./administrateur/administrateur.route').then(m =>m.administrateurRoutes)}
+
 ];

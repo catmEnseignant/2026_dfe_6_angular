@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PatientService } from '../patient-service';
+import { PatientService } from '../../patient-service';
 
 @Component({
   selector: 'app-patient',
@@ -47,12 +47,12 @@ export class Patient implements OnInit {
     return "email@Gmail.com"
   }
   getInfoPatient(){
-    this.router.navigate(['direction'])
+    this.router.navigate(['/administration'])
   }
   
   editPatient(data:any){
     console.log("tester la methode",data.id);
-    this.router.navigate(['edit-patient',data.id])
+    this.router.navigate(['/administration/edit-patient',data.id])
   }
   
 
@@ -60,7 +60,7 @@ export class Patient implements OnInit {
     console.log("delete patient")
     this.service.deletePatients(id).subscribe(
       res=>{
-        this.router.navigate(["/patient"])
+        this.router.navigate(["/administration/patient"])
         console.log(res)
       }
 
