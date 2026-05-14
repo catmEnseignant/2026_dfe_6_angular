@@ -1,0 +1,300 @@
+body{
+font-family:'Poppins', sans-serif;
+background:#f4f8fb;
+color:#1f2937;
+}
+
+a{
+text-decoration:none;
+}
+
+/* =========================
+REGISTER SECTION
+========================== */
+
+.register-section{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:150px 8% 100px;
+}
+
+.register-container{
+width:100%;
+max-width:1250px;
+background:white;
+border-radius:35px;
+overflow:hidden;
+display:flex;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* LEFT SIDE */
+
+.left-side{
+width:50%;
+background:linear-gradient(135deg,#0f766e,#115e59);
+color:white;
+padding:70px;
+position:relative;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.left-side::before{
+content:'';
+position:absolute;
+width:450px;
+height:450px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+top:-150px;
+right:-150px;
+}
+
+.left-side::after{
+content:'';
+position:absolute;
+width:320px;
+height:320px;
+border-radius:50%;
+background:rgba(255,255,255,0.05);
+bottom:-120px;
+left:-100px;
+}
+
+.left-content{
+position:relative;
+z-index:2;
+}
+
+.left-content h1{
+font-size:50px;
+line-height:1.2;
+margin-bottom:25px;
+}
+
+.left-content p{
+color:#d1fae5;
+line-height:1.9;
+margin-bottom:40px;
+}
+
+.features{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.feature{
+background:rgba(255,255,255,0.12);
+padding:18px 22px;
+border-radius:16px;
+backdrop-filter:blur(10px);
+}
+
+.feature h3{
+margin-bottom:5px;
+font-size:18px;
+}
+
+.feature span{
+color:#d1fae5;
+font-size:14px;
+}
+
+/* RIGHT SIDE */
+
+.right-side{
+width:50%;
+padding:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:white;
+}
+
+.register-box{
+width:100%;
+max-width:500px;
+}
+
+.register-header{
+margin-bottom:35px;
+}
+
+.register-header h2{
+font-size:40px;
+color:#0f172a;
+margin-bottom:10px;
+}
+
+.register-header p{
+color:#64748b;
+line-height:1.8;
+}
+
+.form-row{
+display:flex;
+gap:15px;
+}
+
+.input-group{
+margin-bottom:22px;
+width:100%;
+}
+
+.input-group label{
+display:block;
+margin-bottom:10px;
+font-weight:500;
+color:#334155;
+}
+
+.input-group input,
+.input-group select{
+width:100%;
+padding:17px;
+border:1px solid #dbe2ea;
+border-radius:14px;
+outline:none;
+font-size:15px;
+transition:0.3s;
+background:#f8fafc;
+font-family:'Poppins', sans-serif;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+border-color:#0f766e;
+background:white;
+box-shadow:0 0 0 4px rgba(15,118,110,0.1);
+}
+
+.terms{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin-bottom:28px;
+color:#475569;
+font-size:14px;
+line-height:1.7;
+}
+
+.terms a{
+color:#0f766e;
+font-weight:500;
+}
+
+.register-btn{
+width:100%;
+padding:17px;
+border:none;
+border-radius:14px;
+background:#0f766e;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.register-btn:hover{
+background:#115e59;
+}
+
+.divider{
+display:flex;
+align-items:center;
+text-align:center;
+margin:30px 0;
+color:#94a3b8;
+font-size:14px;
+}
+
+.divider::before,
+.divider::after{
+content:'';
+flex:1;
+border-bottom:1px solid #e2e8f0;
+}
+
+.divider::before{
+margin-right:12px;
+}
+
+.divider::after{
+margin-left:12px;
+}
+
+.social-buttons{
+display:flex;
+gap:15px;
+}
+
+.social-btn{
+flex:1;
+padding:14px;
+border-radius:14px;
+border:1px solid #dbe2ea;
+background:white;
+cursor:pointer;
+font-weight:500;
+transition:0.3s;
+}
+
+.social-btn:hover{
+background:#f8fafc;
+}
+
+.login-link{
+margin-top:35px;
+text-align:center;
+color:#64748b;
+}
+
+.login-link a{
+color:#0f766e;
+font-weight:600;
+}
+
+/* =========================
+RESPONSIVE
+========================== */
+
+@media(max-width:1050px){
+
+    nav{
+        display:none;
+    }
+
+    .register-container{
+        flex-direction:column;
+    }
+
+    .left-side,
+    .right-side{
+        width:100%;
+    }
+
+    .left-side{
+        padding:50px;
+    }
+
+    .right-side{
+        padding:50px 30px;
+    }
+
+    .left-content h1{
+        font-size:38px;
+    }
+
+    .form-row{
+        flex-direction:column;
+        gap:0;
+    }
+
+}

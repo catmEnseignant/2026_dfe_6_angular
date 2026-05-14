@@ -2,7 +2,7 @@ import { AsyncPipe } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { PatientService } from '../patient-service';
+import { PatientService } from '../../patient-service';
 
 @Component({
   selector: 'app-patient',
@@ -15,7 +15,7 @@ import { PatientService } from '../patient-service';
 export class Patient implements OnInit {
   title = 'Patients';
   
-  patients2! :Observable<any> 
+  patients2: any = {}
 
   loading = true
 
@@ -28,24 +28,20 @@ export class Patient implements OnInit {
   // ngOnInit est une methode abstraite de l'interface OnInit donc qui a besoin d'être declarer dans la classe concrete
   ngOnInit(): void {
     console.log("Tester la methode")
-    this.patients2 = this.servicePatient.getPatients()
-  }
-
-  getSomme(a: number, b:number) :number {
-    return a + b
-  }
-
-  getEmail() :string {
-    return "email@gmail.com"
+    this.servicePatient.getPatients().subscribe(res => {
+      console.log(res)
+      this.patients2 = res
+    })
+    console.log(this.patients2)  
   }
 
   getInfoPatient() {
-    this.route.navigate(['/insert-patient']);
+    this.route.navigate(['/administration/insert-patient']);
   }
 
   editPatient(patient:any) {
     console.log("Test : ", patient)
-    this.route.navigate(['edit-patient', patient.id])
+    this.route.navigate(['/administration/edit-patient', patient.id])
   }
 
   deletePatient(id:any) {
@@ -53,17 +49,9 @@ export class Patient implements OnInit {
     this.servicePatient.deletePatient(id).subscribe(res => {
       console.log("Supression reussi avec succés")
       console.log(res)
-      this.route.navigate(['patient'])
+      this.route.navigate(['/administration/patient'])
     }, err => {
       console.log("Erreur lors de la suppression", err)
     })
   }
-
-
-
-  // getPatients() {
-  //   return this.http.get('http://localhost:3000/patients')
-  // }
-
-  
 }

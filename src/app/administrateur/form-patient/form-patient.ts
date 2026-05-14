@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PatientService } from '../patient-service';
+import { PatientService } from '../../patient-service';
 
 @Component({
   selector: 'app-form-patient',
@@ -24,7 +24,7 @@ export class FormPatient implements OnInit {
     prenom : new FormControl(''),
     nom : new FormControl(''),
     email : new FormControl(''),
-    age : new FormControl('')
+    telephone : new FormControl('')
   })
 
   ngOnInit() :void {
@@ -43,7 +43,7 @@ export class FormPatient implements OnInit {
           prenom : this.patient.prenom,
           nom : this.patient.nom,
           email : this.patient.email,
-          age : this.patient.age
+          telephone : this.patient.telephone
         })
       }, err => {
         console.log("Erreur lors de la recuperation: ", err)
@@ -59,7 +59,7 @@ export class FormPatient implements OnInit {
       this.servicePatient.updatePatient(this.idPatient, this.formPatient.value).subscribe(res => {
         console.log("Modification effectué avec succés")
         console.log(res)
-        this.route.navigate(['/patient'])
+        this.route.navigate(['/administration/patient'])
       }, err => {
         console.log("Erreur lors de la modification", err)
       })
@@ -71,7 +71,7 @@ export class FormPatient implements OnInit {
       this.servicePatient.storePatients(data).subscribe(res => {
         console.log("Patient ajouté avec succées")
         console.log(res)
-        this.route.navigate(['/patient'])
+        this.route.navigate(['/administration/patient'])
       }, err => {
         console.log("Erreur lors de l'ajout") 
         console.log(err)

@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { MedecinService } from '../medecin-service';
+import { MedecinService } from '../../medecin-service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -58,7 +58,7 @@ export class FormMedecin implements OnInit {
     if(this.isEdit) {
       this.medecinService.updateMedecin(this.IdMedecin, this.formMedecin.value).subscribe((res) => {
         console.log("Modification réussi avvec succés", res)
-        this.route.navigate(['/medecin'])
+        this.route.navigate(['/administration/medecin'])
       }, (err) => {
         console.log("Erreur lors de la modification", err)
       })
@@ -66,7 +66,7 @@ export class FormMedecin implements OnInit {
       let data = this.formMedecin.value
       this.medecinService.storeMedecin(data).subscribe((res) => {
         console.log(res)
-        this.route.navigate(["/medecin"])
+        this.route.navigate(["/administration/medecin"])
       }, (err) => {
         console.log('Insertion echoué', err)
       })

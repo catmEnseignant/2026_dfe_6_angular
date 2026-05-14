@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +10,7 @@ export class MedecinService {
   host = "http://localhost:3000"
 
   getMedecins() {
-    return this.http.get(`${this.host}/medecins`)
+    return this.http.get(`${this.host}/medecins`) 
   }
 
   storeMedecin(medecin:any) {

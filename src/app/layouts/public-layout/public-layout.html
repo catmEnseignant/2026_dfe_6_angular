@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediCare+ | Gestion Hospitalière</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="logo">MediCare+</div>
+
+      <nav>
+        <a routerLink="/acceuil">Accueil</a>
+        <a routerLink="/fonctionnalites">Fonctionnalités</a>
+        <a routerLink="#">Services</a>
+        <a routerLink="#">Témoignages</a>
+        <a routerLink="#">Contact</a>
+      </nav>
+
+      <div class="header-buttons">
+        <a routerLink="/auth" class="btn btn-login">Se connecter</a>
+        <a routerLink="/register" class="btn btn-signup">S'inscrire</a>
+      </div>
+    </header>
+
+    <router-outlet></router-outlet>
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MediCare+</h3>
+          <p>Solution complète de gestion hospitalière moderne et sécurisée.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Liens rapides</h3>
+
+          <a href="#">Accueil</a><br />
+          <a href="#">Fonctionnalités</a><br />
+          <a href="#">Services</a><br />
+          <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Support</h3>
+
+          <a href="#">Centre d’aide</a><br />
+          <a href="#">FAQ</a><br />
+          <a href="#">Conditions</a><br />
+          <a href="#">Confidentialité</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+
+          <p>Email : contact@medicareplus.com</p>
+          <p>Téléphone : +221 77 000 00 00</p>
+          <p>Dakar, Sénégal</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 MediCare+ — Tous droits réservés.</div>
+    </footer>
+  </body>
+</html>

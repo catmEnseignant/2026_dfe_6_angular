@@ -12,7 +12,7 @@
                 <input class="col-3 form-control me-2" type="search" [placeholder]= "title" aria-label="Search"/>
             </div>
             <div class="col-2">
-                <button (click)="getInfoPatient()" class="col btn btn-outline-success" type="submit">Ajouter un patient</button>
+                <button (click)="getInfoPatient()" class="col btn btn-outline-success">Ajouter un patient</button>
             </div>
         </div>
     </div>
@@ -31,13 +31,13 @@
             </thead>
             
             <tbody>
-                @for(item of patients2 | async ;track $index) {
+                @for(item of patients2.data;track $index) {
                     <tr>
                         <th scope="row">{{ item.id }}</th>
                         <td>{{ item.prenom }}</td>
                         <td>{{ item.nom }}</td>
                         <td> {{ item.email }} </td>
-                        <td> {{ item.age }} </td>
+                        <td> {{ item.telephone }} </td>
                         <td class="d-flex gap-2">
                             <button class="btn btn-success" (click)="editPatient(item)">
                                 <i class="bi bi-pencil"></i>
