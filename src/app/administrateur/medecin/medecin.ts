@@ -3,7 +3,7 @@ import { AsyncPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { MedecinService } from '../medecin-service';
+import { MedecinService } from '../../medecin-service';
 
 @Component({
   selector: 'app-medecin',

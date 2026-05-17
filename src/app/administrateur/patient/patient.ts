@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { get } from 'http';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { PatientService } from '../patient-service';
+import { PatientService } from '../../patient-service';
 
 @Component({
   selector: 'app-patient',
@@ -42,7 +42,7 @@ export class Patient{
   }
 
   getInfoPatient(){
-    this.router.navigate(['direction'])
+    this.router.navigate(['administration/direction'])
   }
 
   // getPatients(){ // Cette methode utilise le service HttpClient pour effectuer une requete GET vers l'URL 'http://localhost:3000/patients' et retourne un Observable qui contient la réponse de la requete. L'observable est ensuite utilisé dans la methode ngOnInit pour récupérer les données des patients et les stocker dans l'attribut Patients2.
@@ -54,13 +54,13 @@ export class Patient{
   editPatient(item:any){
     console.log("Modification des informations du patient")
     console.log(item)
-    this.router.navigate(['edit-patient',item.id])
+    this.router.navigate(['administration/edit-patient',item.id])
   }
 
   deletePatient(id:any){
     if(confirm("Êtes-vous sûr de vouloir supprimer ce patient ?")){
       this.service.deletePatient(id).subscribe(res => {
-        this.router.navigate(['patient']);
+        this.router.navigate(['administration/patient']);
       }, error => {
         console.log("Erreur lors de la suppression du patient")
         console.log(error);

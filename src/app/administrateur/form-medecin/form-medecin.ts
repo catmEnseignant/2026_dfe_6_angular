@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MedecinService } from '../medecin-service';
+import { MedecinService } from '../../medecin-service';
 
 @Component({
   selector: 'app-form-medecin',
@@ -53,7 +53,7 @@ export class FormMedecin implements OnInit {
       this.service.updateMedecin(this.idMedecin, this.formMedecin.value).subscribe(
         (res) => {
           console.log('Médecin modifié avec succès');
-          this.router.navigate(['medecin']);
+          this.router.navigate(['administration/medecin']);
         },
         (error) => {
           console.log('Erreur lors de la modification du médecin');
@@ -65,7 +65,7 @@ export class FormMedecin implements OnInit {
       this.service.storeMedecin(data).subscribe(
         (res) => {
           console.log('Médecin ajouté avec succès');
-          this.router.navigate(['medecin']);
+          this.router.navigate(['administration/medecin']);
         },
         (error) => {
           console.log('Erreur lors de l ajout du médecin dans le back-end');

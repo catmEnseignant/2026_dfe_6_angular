@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Navbar } from './navbar/navbar'; // Importation du composant Navbar
-import { Sidebar } from './sidebar/sidebar';
-import { Footer } from './footer/footer';
+import { Navbar } from './layouts/navbar/navbar'; // Importation du composant Navbar
+import { Sidebar } from './layouts/administration/sidebar/sidebar';
+import { Footer } from './layouts/footer/footer';
 
 @Component({
   selector: 'app-root', // c'est le nom du composant

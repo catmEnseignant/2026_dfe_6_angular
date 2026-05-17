@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { PatientService } from '../patient-service';
+import { PatientService } from '../../patient-service';
 
 @Component({
   selector: 'app-form-patient',
@@ -66,7 +66,7 @@ export class FormPatient implements OnInit{
       this.service.updatePatient(this.idPatient, this.formPatient.value).subscribe(res => {
         console.log("Patient modifié avec succès");
         console.log(res);
-        this.router.navigate(['patient']);
+        this.router.navigate(['administration/patient']);
       }, error => {
         console.log("Erreur lors de la modification du patient")
         console.log(error);
@@ -76,7 +76,7 @@ export class FormPatient implements OnInit{
       this.service.storePatient(data).subscribe(res=> { // Observable avec subscribe
         console.log("Patient ajouté avec succès");
         console.log(res);
-        this.router.navigate(['patient']);
+        this.router.navigate(['administration/patient']);
       }, error => {
         console.log("Erreur lors de l'ajout du patient dans la partie back-end")
         console.log(error);
