@@ -3,7 +3,11 @@
   "version": 1,
   "cli": {
     "packageManager": "npm",
+<<<<<<< HEAD
     "analytics": "1a9d5cb6-4658-4184-9ac2-e63eb23f5607"
+=======
+    "analytics": "c0391fad-e353-490a-8ea4-ed0812a4b469"
+>>>>>>> c32d3e2a57c68826cf651a6a275aa59833059823
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -26,9 +30,16 @@
               }
             ],
             "styles": [
+<<<<<<< HEAD
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css" 
             ],
+=======
+             "node_modules/bootstrap/dist/css/bootstrap.min.css"
+        
+            ],  
+            
+>>>>>>> c32d3e2a57c68826cf651a6a275aa59833059823
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
@@ -80,4 +91,8 @@
       }
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c32d3e2a57c68826cf651a6a275aa59833059823

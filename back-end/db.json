@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "patients": [
     {
       "id": "3",
@@ -64,6 +65,57 @@
       "nom": "Samba",
       "mail": "samba@gmail.com",
       "specialite": "Cardiologie"
+=======
+  "patient": [
+    {
+      "id": "1",
+      "nom": "sanou",
+      "prenom": "seck",
+      "mail": "secksanou@gmail.com",
+      "age": 20
+    },
+    {
+      "id": "2",
+      "nom": "seynabou",
+      "prenom": "mbegue",
+      "mail": "mbengueseynabou@gmail.com",
+      "age": 20
+    },
+    {
+      "id": "dc16",
+      "prenom": "Seyny",
+      "nom": "Mbengue",
+      "email": "mbengueseyny@gmail.com",
+      "age": 6
+    },
+    {
+      "id": "c3de",
+      "prenom": "mbengue",
+      "nom": "sokhna",
+      "email": "mbengueseyny@gmail.com",
+      "age": 11
+    },
+    {
+      "id": "82ef",
+      "prenom": "wane",
+      "nom": "fatima",
+      "email": "wanefatima@gmail.com",
+      "age": 11
+    },
+    {
+      "id": "3bfe",
+      "prenom": "Seyny",
+      "nom": "Mbengue",
+      "email": "mbengueseyny@gmail.com",
+      "age": 4
+    },
+    {
+      "id": "d463",
+      "prenom": "Seyny",
+      "nom": "Mbengue",
+      "email": "mbengueseyny@gmail.com",
+      "age": 13
+>>>>>>> c32d3e2a57c68826cf651a6a275aa59833059823
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
