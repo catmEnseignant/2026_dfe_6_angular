@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Patient, PatientService } from '../patient-service';
+import { Patient, PatientService } from '../../patient-service';
 
 @Component({
   standalone: true,
@@ -39,11 +39,11 @@ export class FormPatient implements OnInit {
   private loadPatient(id: number): void {
     this.loading = true;
     this.patientService.getPatient(id).subscribe({
-      next: (patient) => {
+      next: (patient: Patient) => {
         this.formPatient.patchValue(patient);
         this.loading = false;
       },
-      error: (err) => {
+      error: (err: any) => {
         console.error('Erreur lors du chargement du patient :', err);
         this.loading = false;
       },
@@ -63,9 +63,9 @@ export class FormPatient implements OnInit {
       this.patientService.updatePatient(this.patientId, patientData).subscribe({
         next: () => {
           this.loading = false;
-          this.router.navigate(['/patient']);
+          this.router.navigate(['/administration/patient']);
         },
-        error: (err) => {
+        error: (err: any) => {
           console.error('Erreur lors de la mise à jour du patient :', err);
           this.loading = false;
           alert('Impossible de mettre à jour le patient');
@@ -75,9 +75,9 @@ export class FormPatient implements OnInit {
       this.patientService.createPatient(patientData).subscribe({
         next: () => {
           this.loading = false;
-          this.router.navigate(['/patient']);
+          this.router.navigate(['/administration/patient']);
         },
-        error: (err) => {
+        error: (err: any) => {
           console.error('Erreur lors de l’ajout du patient :', err);
           this.loading = false;
           alert('Impossible d’ajouter le patient');
@@ -87,7 +87,7 @@ export class FormPatient implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/patient']);
+    this.router.navigate(['/administration/patient']);
   }
 
   get formTitle(): string {

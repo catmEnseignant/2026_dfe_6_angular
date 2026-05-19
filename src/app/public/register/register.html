@@ -1,0 +1,110 @@
+<div class="register-page">
+  <aside class="register-side">
+    <div class="register-side-card">
+      <span class="register-badge">Inscription</span>
+      <h1>Bienvenue sur MediCare</h1>
+      <p>Créez votre compte pour commencer à gérer médecins, patients et dossiers avec sérénité.</p>
+      <ul class="register-benefits">
+        <li>✔ Interface claire et moderne</li>
+        <li>✔ Navigation intuitive</li>
+        <li>✔ Suivi sécurisé des données</li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="register-panel">
+    <div class="register-head">
+      <h2>Créer un compte</h2>
+      <p>Indiquez les informations essentielles pour démarrer votre expérience.</p>
+    </div>
+
+    <form class="register-form" [formGroup]="formRegister" (ngSubmit)="registerUser()">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName" class="form-label">Prénom</label>
+          <input type="text" id="firstName" class="form-input" placeholder="Jean" formControlName="prenom" />
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="form-label">Nom</label>
+          <input type="text" id="lastName" class="form-input" placeholder="Dupont" formControlName="nom" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email" class="form-label">Adresse e-mail</label>
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="votre.email@example.com"
+            required
+            formControlName="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone" class="form-label">Téléphone</label>
+          <input
+            type="tel"
+            id="phone"
+            class="form-input"
+            placeholder="+221 77 114 39 07"
+            required
+            formControlName="telephone"
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="specialite" class="form-label">Spécialité</label>
+          <select id="specialite" class="form-input" required formControlName="specialite">
+            <option value="">Sélectionnez votre spécialité</option>
+            <option value="cardio">Cardiologie</option>
+            <option value="neuro">Neurologie</option>
+            <option value="ortho">Orthopédie</option>
+            <option value="dermato">Dermatologie</option>
+            <option value="pediatrie">Pédiatrie</option>
+            <option value="general">Médecin généraliste</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="address" class="form-label">Adresse</label>
+          <input
+            type="text"
+            id="address"
+            class="form-input"
+            placeholder="123 Rue de la Santé, Dakar"
+            required
+            formControlName="addresse"
+          />
+        </div>
+      </div>
+
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password" class="form-label">Mot de passe</label>
+          <input type="password" id="password" class="form-input" placeholder="••••••••" formControlName="password" />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword" class="form-label">Confirmer le mot de passe</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            class="form-input"
+            placeholder="••••••••"
+            formControlName="confirmPassword"
+          />
+        </div>
+      </div>
+
+
+
+      <button type="submit" class="btn btn-primary btn-block" >Créer mon compte</button>
+    </form>
+
+    <div class="register-footer">
+      <p>Vous avez déjà un compte ? <a routerLink="/auth" class="auth-link">Se connecter</a></p>
+    </div>
+  </div>
+</div>

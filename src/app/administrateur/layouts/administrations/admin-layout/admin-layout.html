@@ -1,0 +1,39 @@
+<div class="admin-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h3 class="sidebar-title">🏥 MediCare Admin</h3>
+    </div>
+    <nav class="sidebar-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="/administration/patient" routerLinkActive="active" class="nav-link">
+            👥 Patients
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/administration/medecin" routerLinkActive="active" class="nav-link">
+            👨‍⚕️ Médecins
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link logout"> ← Retour à l'accueil </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="content-header">
+      <h1 class="page-title">Panneau d'Administration</h1>
+      <div class="user-info">
+        <span>Administrateur</span>
+      </div>
+    </header>
+
+    <div class="content-body">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>

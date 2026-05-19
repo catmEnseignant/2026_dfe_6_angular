@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="card-body">
-    <div *ngIf="loading" class="text-center py-4">Chargement des patients...</div>
+    
     <div *ngIf="!loading && patients.length === 0" class="text-center py-4">
       Aucun patient trouvé.
     </div>
@@ -43,4 +43,5 @@
     </table>
   </div>
 </div>
+
 

@@ -1,0 +1,56 @@
+<div class="auth-page">
+  <div class="auth-panel">
+    <div class="auth-head">
+      <span class="auth-label">Connexion sécurisée</span>
+      <h1>Accédez à votre espace MediCare</h1>
+      <p>
+        Connectez-vous pour gérer vos rendez-vous, médecins et patients avec une interface claire.
+      </p>
+    </div>
+
+    <form class="auth-form">
+      <div class="form-group">
+        <label for="email" class="form-label">Adresse e-mail</label>
+        <input
+          type="email"
+          id="email"
+          class="form-input"
+          placeholder="votre.email@example.com"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Mot de passe</label>
+        <input type="password" id="password" class="form-input" placeholder="••••••••" required />
+      </div>
+
+      <div class="form-options">
+        <label class="remember-me">
+          <input type="checkbox" />
+          <span>Se souvenir de moi</span>
+        </label>
+        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+    </form>
+
+    <div class="auth-footer">
+      <p>Pas encore membre ? <a routerLink="/register" class="auth-link">Créer un compte</a></p>
+    </div>
+  </div>
+
+  <aside class="auth-aside">
+    <div class="auth-aside-card">
+      <span class="aside-label">Expérience fluide</span>
+      <h2>Design apaisant, navigation efficace</h2>
+      <p>L’interface est conçue pour rendre chaque action simple et rassurante.</p>
+      <ul class="aside-list">
+        <li><strong>✔</strong> Navigation intuitive</li>
+        <li><strong>✔</strong> Accès rapide aux données</li>
+        <li><strong>✔</strong> Sécurité renforcée</li>
+      </ul>
+    </div>
+  </aside>
+</div>

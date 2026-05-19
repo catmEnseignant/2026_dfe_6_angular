@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Medecin, MedecinService } from '../medecin-service';
+import { Medecin, MedecinService } from '../../medecin-service';
 
 @Component({
   standalone: true,
@@ -40,11 +40,11 @@ export class FormMedecin implements OnInit {
   private loadMedecin(id: number): void {
     this.loading = true;
     this.medecinService.getMedecin(id).subscribe({
-      next: (medecin) => {
+      next: (medecin: Medecin) => {
         this.formMedecin.patchValue(medecin);
         this.loading = false;
       },
-      error: (err) => {
+      error: (err: any) => {
         console.error('Erreur lors du chargement du médecin :', err);
         this.loading = false;
       },
@@ -64,9 +64,9 @@ export class FormMedecin implements OnInit {
       this.medecinService.updateMedecin(this.medecinId, medecinData).subscribe({
         next: () => {
           this.loading = false;
-          this.router.navigate(['/medecin']);
+          this.router.navigate(['/administration/medecin']);
         },
-        error: (err) => {
+        error: (err: any) => {
           console.error('Erreur lors de la mise à jour du médecin :', err);
           this.loading = false;
           alert('Impossible de mettre à jour le médecin');
@@ -76,9 +76,9 @@ export class FormMedecin implements OnInit {
       this.medecinService.createMedecin(medecinData).subscribe({
         next: () => {
           this.loading = false;
-          this.router.navigate(['/medecin']);
+          this.router.navigate(['/administration/medecin']);
         },
-        error: (err) => {
+        error: (err: any) => {
           console.error('Erreur lors de l’ajout du médecin :', err);
           this.loading = false;
           alert('Impossible d’ajouter le médecin');
@@ -88,7 +88,7 @@ export class FormMedecin implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/medecin']);
+    this.router.navigate(['/administration/medecin']);
   }
 
   get formTitle(): string {

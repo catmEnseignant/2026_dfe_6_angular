@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { MedecinService } from '../medecin-service';
+import { MedecinService, Medecin as MedecinInterface } from '../../medecin-service';
 
 @Component({
   standalone: true,
@@ -26,20 +26,20 @@ export class Medecin implements OnInit {
   }
 
   insertMedecin(): void {
-    this.router.navigate(['/insert-medecin']);
+    this.router.navigate(['/administration/insert-medecin']);
   }
 
-  editMedecin(medecin: any): void {
-    this.router.navigate(['/edit-medecin', medecin.id]);
+  editMedecin(medecin: MedecinInterface): void {
+    this.router.navigate(['/administration/edit-medecin', medecin.id]);
   }
 
-  deleteMedecin(medecin: any): void {
+  deleteMedecin(medecin: MedecinInterface): void {
     if (confirm('Êtes-vous sûr de vouloir supprimer ce médecin ?')) {
-      this.medecinService.deleteMedecin(medecin.id).subscribe({
+      this.medecinService.deleteMedecin(medecin.id!).subscribe({
         next: () => {
           this.loadMedecins();
         },
-        error: (err) => {
+        error: (err: any) => {
           console.error('Erreur lors de la suppression :', err);
           alert('Erreur lors de la suppression du médecin');
         },
@@ -47,7 +47,7 @@ export class Medecin implements OnInit {
     }
   }
 
-  trackById(index: number, medecin: any): number {
-    return medecin.id ?? index;
+  trackById(index: number, medecin: MedecinInterface): number {
+    return (medecin.id as number) ?? index;
   }
 }

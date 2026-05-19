@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Content } from '../content/content';
+import { Content } from '../../../content/content';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,19 +12,18 @@ export class Sidebar {
   constructor(private router: Router) {}
 
   goToFormPatient() {
-    this.router.navigate(['/insert-patient']);
+    this.router.navigate(['/administration/insert-patient']);
   }
 
   goToPatientList() {
-    this.router.navigate(['/patient']);
+    this.router.navigate(['/administration/patient']);
   }
 
   goToMedecinList() {
-    this.router.navigate(['/medecin']);
+    this.router.navigate(['/administration/medecin']);
   }
 
   goToFormMedecin() {
-    this.router.navigate(['/insert-medecin']);
+    this.router.navigate(['/administration/insert-medecin']);
   }
 }
-

@@ -1,0 +1,132 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.sidebar-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.sidebar-nav {
+  padding: 20px 0;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-bottom: 5px;
+}
+
+.nav-link {
+  display: block;
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-left-color: #3498db;
+}
+
+.nav-link.active {
+  background: rgba(52, 152, 219, 0.2);
+  color: white;
+  border-left-color: #3498db;
+}
+
+.logout {
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.logout:hover {
+  background: rgba(231, 76, 60, 0.1);
+  border-left-color: #e74c3c;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-header {
+  background: white;
+  padding: 20px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.user-info {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.content-body {
+  flex: 1;
+  padding: 30px;
+  background: #f8f9fa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .content-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PatientService } from '../patient-service';
+import { PatientService, Patient as PatientInterface } from '../../patient-service';
 
 @Component({
   standalone: true,
@@ -12,7 +12,7 @@ import { PatientService } from '../patient-service';
 })
 export class Patient implements OnInit {
   title = 'Patients';
-  patients: any[] = [];
+  patients: PatientInterface[] = [];
   loading = true;
 
   private router = inject(Router);
@@ -25,11 +25,11 @@ export class Patient implements OnInit {
   loadPatients(): void {
     this.loading = true;
     this.patientService.getPatients().subscribe({
-      next: (patients) => {
+      next: (patients: PatientInterface[]) => {
         this.patients = patients;
         this.loading = false;
       },
-      error: (err) => {
+      error: (err: any) => {
         console.error('Erreur lors du chargement des patients :', err);
         this.loading = false;
       },
@@ -37,20 +37,20 @@ export class Patient implements OnInit {
   }
 
   insertPatient(): void {
-    this.router.navigate(['/insert-patient']);
+    this.router.navigate(['/administration/insert-patient']);
   }
 
-  editPatient(patient: any): void {
-    this.router.navigate(['/edit-patient', patient.id]);
+  editPatient(patient: PatientInterface): void {
+    this.router.navigate(['/administration/edit-patient', patient.id]);
   }
 
-  deletePatient(patient: any): void {
+  deletePatient(patient: PatientInterface): void {
     if (confirm('Êtes-vous sûr de vouloir supprimer ce patient ?')) {
-      this.patientService.deletePatient(patient.id).subscribe({
+      this.patientService.deletePatient(patient.id!).subscribe({
         next: () => {
           this.loadPatients();
         },
-        error: (err) => {
+        error: (err: any) => {
           console.error('Erreur lors de la suppression :', err);
           alert('Erreur lors de la suppression du patient');
         },
