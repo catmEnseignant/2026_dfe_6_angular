@@ -11,7 +11,7 @@ export class PatientService {
 
   getPatients(){ // Cette methode utilise le service HttpClient pour effectuer une requete GET vers l'URL 'http://localhost:8000/api/patients' et retourne un Observable qui contient la réponse de la requete. L'observable est ensuite utilisé dans la methode ngOnInit pour récupérer les données des patients et les stocker dans l'attribut Patients2.
     return this.http.get(this.host + '/patients');
-  }
+  } 
 
   storePatient(data:any){
     return this.http.post(this.host + '/patients', data);

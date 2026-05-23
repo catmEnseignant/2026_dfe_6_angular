@@ -1,53 +1,30 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Angular</title>
+<header>
+    <div class="logo">
+        AngularApp
+    </div>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <nav>
+        <a routerLink="/">Accueil</a>
+        <a routerLink="/features">Fonctionnalités</a>
+        <a routerLink="/services">Services</a>
+        <a routerLink="/contact">Contact</a>
+    </nav>
 
-    <!-- Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-</head>
-<body>
+    <div class="auth-buttons">
+        <a routerLink="/auth" class="login-btn">
+            Se connecter
+        </a>
 
-    <!-- HEADER -->
+        <a routerLink="/register" class="signup-btn">
+            S'inscrire
+        </a>
+    </div>
 
-    <header>
+</header>
 
-        <div class="logo">
-            AngularApp
-        </div>
+<router-outlet></router-outlet>
 
-        <nav>
-            <a routerLink="/">Accueil</a>
-            <a routerLink="/features">Fonctionnalités</a>
-            <a routerLink="/services">Services</a>
-            <a routerLink="/contact">Contact</a>
-        </nav>
-
-        <div class="auth-buttons">
-            <a routerLink="/auth" class="login-btn">
-                Se connecter
-            </a>
-
-            <a routerLink="/register" class="signup-btn">
-                S'inscrire
-            </a>
-        </div>
-
-    </header>
-
-    <router-outlet></router-outlet>
-
-    <!-- FOOTER -->
-
-    <footer>
-        © 2026 AngularApp - Tous droits réservés
-    </footer>
-
-</body>
-</html>
+<!-- FOOTER -->
+<footer>
+    © 2026 AngularApp - Tous droits réservés
+</footer>
