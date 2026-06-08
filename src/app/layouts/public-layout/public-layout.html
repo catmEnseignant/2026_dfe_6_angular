@@ -1,0 +1,108 @@
+
+<div class="layout-container">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-brand">
+                <div class="logo-icon">🏥</div>
+                <h2 class="logo">MediCare</h2>
+            </div>
+            <div class="menu-toggle" onclick="document.querySelector('.navbar-menu').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu">
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon">🏠</span>
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">👥</span>
+                        Patients
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">👨‍⚕️</span>
+                        Médecins
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">📅</span>
+                        Rendez-vous
+                    </a>
+                </li>
+                <div class="auth-buttons">
+                    <a href="/auth" class="btn-login">🔐 Se connecter</a>
+                    <a href="/register" class="btn-register">📝 S'inscrire</a>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    
+    <router-outlet></router-outlet>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MediCare</h3>
+                <p>Votre santé, notre priorité depuis 2026.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🔗</a>
+                    <a href="#" class="social-link">🐦</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="accueil">Accueil</a></li>
+                    <li><a href="patients">Patients</a></li>
+                    <li><a href="medecins">Médecins</a></li>
+                    <li><a href="rendez-vous">Rendez-vous</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Consultation</a></li>
+                    <li><a href="#">Urgences</a></li>
+                    <li><a href="#">Laboratoire</a></li>
+                    <li><a href="#">Téléconsultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li>📞 +221 33 123 45 67</li>
+                    <li>✉️ contact@medicare.sn</li>
+                    <li>📍 Dakar, Sénégal</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MediCare. Tous droits réservés.</p>
+            <p>💚 Votre santé est notre priorité</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>

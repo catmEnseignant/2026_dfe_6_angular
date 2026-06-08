@@ -1,0 +1,62 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-5">
+                @if (title == 'Médecins'){
+                    <h5>{{title}}</h5>
+                }
+            </div>
+            <div class="col-3">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher un médecin..." aria-label="Search">
+            </div>
+            <div class="col-4">
+                <button class="btn btn-outline-success my-2 my-sm-0" (click)="navigateToForm()">
+                    Ajouter un médecin
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Spécialité</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(item of medecins$ | async; track $index){
+                    <tr>
+                        <th scope="row">{{$index + 1}}</th>
+                        <td>{{item.prenom}}</td>
+                        <td>{{item.nom}}</td>
+                        <td>{{item.email}}</td>
+                        <td>
+                            <span class="badge bg-info">{{item.specialite}}</span>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary btn-sm" (click)="editMedecin(item)">
+                                Modifier
+                            </button>
+                            <button class="btn btn-danger btn-sm ms-2" (click)="deleteMedecin(item.id)">
+                                Supprimer
+                            </button>
+                        </td>
+                    </tr>
+                }
+                @empty {
+                    <tr>
+                        <td colspan="6" class="text-center">
+                            Aucun médecin trouvé
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, contentChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { Content } from '../content/content';
 import { RouterLink } from "@angular/router";
 

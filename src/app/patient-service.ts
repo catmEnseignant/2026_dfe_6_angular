@@ -1,42 +1,36 @@
-import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class PatientService {
-  private http = inject(HttpClient);
 
-  //URL centralisée qui contient l'attribut(host) de la classe on 
-  host = "http://localhost:3000";
 
+  // apiUrl est une variable qui contient l'URL de l'API backend pour les patients. Elle est utilisée dans les methodes storePatient et getPatients pour envoyer des requetes HTTP vers le backend.
+  private apiUrl = 'http://127.0.0.1:8000/api';
+  
+  constructor(private http: HttpClient) { }
+  
+  storePatient(data: any) {
+    return this.http.post(this.apiUrl, data );
+  }
+  
   getPatients() {
-    return this.http.get<any[]>(this.host + "/patients");
+    return this.http.get(this.apiUrl + '/patient');
   }
 
-  StorePatient(data: any) {
-
-   return this.http.post(this.host + "/patients", data);//on appel la variable de la  classe
-     
-  
+  FindPatient(id: any) {
+    return this.http.get(`${this.apiUrl}/${id}`);
   }
 
-  FinPatient(id:any){
-    return this.http.get(this.host + "/patients/" + id);
-
-
+  updatPatient(id: any, data: any) {
+    console.log("test update", data);
+    return this.http.put(`${this.apiUrl}/${id}`, data);
   }
 
-  UpdatePatient(id:any, data:any){
-    console.log('texter la methode edit', data);
-    return this.http.put(this.host + "/patients/" + id , data);
-
+   deletePatient(id: any) {
+    return this.http.delete(this.apiUrl + '/' + id);
   }
 
-  DeletePatient(id:any){
-    console.log(id ,'texte')
-    return this.http.delete(this.host + "/patients/" + id);
-
-  }
-  
 }
